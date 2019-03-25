@@ -7,6 +7,7 @@ public class Planets
     private String name;
     private int diameter;
     private float distance;
+    private float OuterOrbit;
 
     public void setname(String name)
     {
@@ -38,6 +39,16 @@ public class Planets
         return distance;
     }
 
+    public void setOuterOrbit(float OuterOrbit)
+    {
+        this.OuterOrbit = OuterOrbit;
+    }
+
+    public float getOuterOrbit()
+    {
+        return OuterOrbit;
+    }
+
     public String toString()
     {
         return name + "\t" + diameter + "\t" + distance;  
@@ -48,6 +59,7 @@ public class Planets
         name = row.getString("name");
         diameter = row.getInt("diameter");
         distance = row.getFloat("distance");
+        OuterOrbit = row.getFloat("Oorbit");
 
     }
 

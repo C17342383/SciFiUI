@@ -7,6 +7,7 @@ public class UI extends PApplet
     Button b;
     MovingCircle mc;
     Radar r;
+    PlanetMap p;
 
     boolean[] keys = new boolean[1024];
 
@@ -38,6 +39,8 @@ public class UI extends PApplet
         b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
         r = new Radar(this, width / 2, height / 2, 200);
+       // p = new PlanetMap(this, 400, 400, 200);
+
     }
 
     public void draw()
