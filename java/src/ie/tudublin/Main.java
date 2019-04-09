@@ -10,6 +10,13 @@ public class Main
 		
 	}
 
+	/*public void planetmap()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Planet());
+		
+	}*/
+
 	public static void main(String[] args)
 	{
 		Main main = new Main();
