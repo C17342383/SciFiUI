@@ -8,6 +8,7 @@ public class UI extends PApplet
     MovingCircle mc;
     Radar r;
     PlanetMap p;
+    SpeedCircle sp;
 
     boolean[] keys = new boolean[1024];
 
@@ -40,6 +41,7 @@ public class UI extends PApplet
         mc = new MovingCircle(this, width / 2, height / 2, 50);
         r = new Radar(this, width / 2, height / 2, 200);
        // p = new PlanetMap(this, 400, 400, 200);
+       sp = new SpeedCircle(this, 0, 0, 200, 200, "Engine 1");
 
     }
 
