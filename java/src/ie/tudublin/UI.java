@@ -11,6 +11,7 @@ public class UI extends PApplet
     Radar r;
     PanelDesign p;
     SpeedCircle sp;
+    SpeedCircle sp2;
 
     boolean[] keys = new boolean[1024];
 
@@ -45,7 +46,8 @@ public class UI extends PApplet
         mc = new MovingCircle(this, width / 2, height / 2, 50);
         r = new Radar(this, 200, 650, 200);
         p = new PanelDesign(this, 1500, 800);
-       sp = new SpeedCircle(this, 0, 0, 200, 200, "Engine 1");
+       sp = new SpeedCircle(this, 1000, 150, 200, 200, "Engine 1");
+       sp2 = new SpeedCircle(this, 1300, 150, 200, 200, "Engine 2");
 
     }
 
@@ -53,7 +55,8 @@ public class UI extends PApplet
     {
         background(0);
 
-        //sp.render();
+    sp.render();
+    sp2.render();
 
         p.render();
         b.render();
