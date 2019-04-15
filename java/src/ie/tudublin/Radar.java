@@ -42,8 +42,6 @@ public class Radar extends PApplet
         ui.rotate(rotation);
         ui.line(x, y,xr, yr);
 
-        //System.out.println("x is" + x + "y is"+y + "diameter is " + diameter + "rad is"+radius);
-        //System.out.println("for x "+ this.x+"for y"+ this.y);
         
 
     }
@@ -55,7 +53,5 @@ public class Radar extends PApplet
         rotation += 0.0039f;
 
         System.out.println("pos x "+ pos.x+"pos y"+ pos.y);
-        //System.out.println("rotation "+ rotation);
-        //System.out.println("2Pi "+ TWO_PI);
     }
 }
