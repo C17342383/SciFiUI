@@ -39,11 +39,11 @@ public class UI extends PApplet
 
     public void setup()
     {
-        b = new Button(this, 150, 475, 100, 50, "I am a button");
-        b2 = new Button(this, 350, 475, 100, 50, "I am a button");
-        b3 = new Button(this, 550, 475, 100, 50, "I am a button");
+        b = new Button(this, 150, 460, 100, 50, "I am a button");
+        b2 = new Button(this, 350, 460, 100, 50, "I am a button");
+        b3 = new Button(this, 550, 460, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
-        r = new Radar(this, width / 2, height / 2, 200);
+        r = new Radar(this, 200, 650, 200);
         p = new PanelDesign(this, 1500, 800);
        sp = new SpeedCircle(this, 0, 0, 200, 200, "Engine 1");
 
@@ -63,8 +63,8 @@ public class UI extends PApplet
        // mc.update();
        // mc.render();
 
-        //r.render();
-        //r.update();
+        r.render();
+        r.update();
 
 
         if (checkKey(LEFT))
