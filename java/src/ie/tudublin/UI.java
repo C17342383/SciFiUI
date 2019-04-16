@@ -14,6 +14,8 @@ public class UI extends PApplet
     PanelDesign p;
     SpeedCircle sp;
     SpeedCircle sp2;
+    SpeedCircle sp3;
+    SpeedCircle sp4;
 
     boolean[] keys = new boolean[1024];
 
@@ -52,6 +54,8 @@ public class UI extends PApplet
         p = new PanelDesign(this, 1500, 800);
        sp = new SpeedCircle(this, 1000, 150, 200, 200, "Engine 1");
        sp2 = new SpeedCircle(this, 1300, 150, 200, 200, "Engine 2");
+       sp3 = new SpeedCircle(this, 1000, 500, 200, 200, "Engine 3");
+       sp4 = new SpeedCircle(this, 1300, 500, 200, 200, "Engine 4");
 
     }
 
@@ -61,6 +65,8 @@ public class UI extends PApplet
 
         sp.render();
         sp2.render();
+        sp3.render();
+        sp4.render();
 
         p.render();
         b.render();

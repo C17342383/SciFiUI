@@ -28,7 +28,7 @@ public class SpeedCircle
         ui.ellipse(x, y, width, height );
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text(text, x +5 , y + height -130);
-        ui.line(x - 86 , width  , x + 86, width);
-        ui.line(x-80, y-50, x, height);
+        ui.line(x - 86 , y + 50 , x + 86, y +50);
+        ui.line(x-80, y-50, x  , y+50);
     }
 }
