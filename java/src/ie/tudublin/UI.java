@@ -7,6 +7,8 @@ public class UI extends PApplet
     Button b;
     Button b2;
     Button b3;
+    Button buttonE1;
+    Button buttonE2;
     MovingCircle mc;
     Radar r;
     PanelDesign p;
@@ -43,6 +45,8 @@ public class UI extends PApplet
         b = new Button(this, 150, 460, 100, 50, "I am a button");
         b2 = new Button(this, 350, 460, 100, 50, "I am a button");
         b3 = new Button(this, 550, 460, 100, 50, "I am a button");
+        buttonE1 = new Button(this, 925, 285, 150, 50, "I am a button E1");
+        buttonE2 = new Button(this, 1225, 285, 150, 50, "I am a button E2");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
         r = new Radar(this, 200, 650, 200);
         p = new PanelDesign(this, 1500, 800);
@@ -55,13 +59,15 @@ public class UI extends PApplet
     {
         background(0);
 
-    sp.render();
-    sp2.render();
+        sp.render();
+        sp2.render();
 
         p.render();
         b.render();
         b2.render();
         b3.render();
+        buttonE1.render();
+        buttonE2.render();
 
        // mc.update();
        // mc.render();
