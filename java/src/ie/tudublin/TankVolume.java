@@ -27,6 +27,17 @@ public class TankVolume
         ui.stroke(255);
         ui.rect(x, y, width, height);
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-        ui.text(text, x + width * 0.5f, y + height * 0.5f);
+        ui.text(text, x + width * 0.55f, y + height * 1.08f);
+
+
+        int numLines = 10;
+        float gap = height / numLines;
+        float x1 =y;
+		for(int l = 0 ; l < numLines; l ++)
+		{
+            ui.line(x, x1, x+width, x1);
+            x1 = x1+gap;
+        }
+        x1 =0;
     }
 }
