@@ -53,7 +53,7 @@ public class UI extends PApplet
     {
         size(1500, 800);
         // Use fullscreen instead of size to make your interface fullscreen
-        //fullScreen(); 
+       // fullScreen(); 
     }
 
     public void setup()
@@ -83,7 +83,7 @@ public class UI extends PApplet
        c4 = new CircleButton(this, 840, 310, 40, 40, "CB4");
        c5 = new CircleButton(this, 840, 390, 40, 40, "CB5");
        cf = new CriticalFuel(this, 1500/2, 800/2, 500, 150, "Critical Low Fuel", "-- CODE : 818 --");
-       th1 = new Thruster(this, 500, 500, 100, 200, "Fuel % : ");
+       th1 = new Thruster(this, 120, 120, 100, 200, "Fuel % : ");
     
     }
 

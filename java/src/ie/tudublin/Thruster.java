@@ -54,5 +54,9 @@ public class Thruster
             ui.line(x+height, x1, y + 190 , x1);
             x1 = x1+gap;
         }
+
+        ui.rect(x - 20, y+height + 30, 200, 20);
+        ui.rect(x - 20, y+height + 60, 200, 20);
+        ui.rect(x - 20, y+height + 90, 200, 20);
     }
 }
