@@ -28,6 +28,7 @@ public class UI extends PApplet
     CircleButton c3;
     CircleButton c4;
     CircleButton c5;
+    CriticalFuel cf;
 
     boolean[] keys = new boolean[1024];
 
@@ -56,20 +57,20 @@ public class UI extends PApplet
 
     public void setup()
     {
-        b = new Button(this, 150, 460, 100, 50, "I am a button");
-        b2 = new Button(this, 350, 460, 100, 50, "I am a button");
-        b3 = new Button(this, 550, 460, 100, 50, "I am a button");
-        buttonE1 = new Button(this, 925, 285, 150, 50, "I am a button E1");
-        buttonE2 = new Button(this, 1225, 285, 150, 50, "I am a button E2");
-        buttonE3 = new Button(this, 925, 635, 150, 50, "I am a button E2");
-        buttonE4 = new Button(this, 1225, 635, 150, 50, "I am a button E2");
+        b = new Button(this, 150, 460, 100, 50, "Station");
+        b2 = new Button(this, 350, 460, 100, 50, "Thrusters");
+        b3 = new Button(this, 550, 460, 100, 50, "Orbit");
+        buttonE1 = new Button(this, 925, 285, 150, 50, "Launch Thruster I");
+        buttonE2 = new Button(this, 1225, 285, 150, 50, "Launch Thruster II");
+        buttonE3 = new Button(this, 925, 635, 150, 50, "Launch Thruster III");
+        buttonE4 = new Button(this, 1225, 635, 150, 50, "Launch Thruster IV");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
         r = new Radar(this, 200, 650, 200);
         p = new PanelDesign(this, 1500, 800);
-       sp = new SpeedCircle(this, 1000, 150, 200, 200, "Engine 1");
-       sp2 = new SpeedCircle(this, 1300, 150, 200, 200, "Engine 2");
-       sp3 = new SpeedCircle(this, 1000, 500, 200, 200, "Engine 3");
-       sp4 = new SpeedCircle(this, 1300, 500, 200, 200, "Engine 4");
+       sp = new SpeedCircle(this, 1000, 150, 200, 200, "Thruster I");
+       sp2 = new SpeedCircle(this, 1300, 150, 200, 200, "Thruster II");
+       sp3 = new SpeedCircle(this, 1000, 500, 200, 200, "Thruster III");
+       sp4 = new SpeedCircle(this, 1300, 500, 200, 200, "Thruster IV");
        t1 = new TankVolume(this, 400, 550, 50, 200, "Tank 1");
        t2 = new TankVolume(this, 500, 550, 50, 200, "Tank 2");
        t3 = new TankVolume(this, 600, 550, 50, 200, "Tank 3");
@@ -80,7 +81,8 @@ public class UI extends PApplet
        c3 = new CircleButton(this, 840, 230, 40, 40, "CB3");
        c4 = new CircleButton(this, 840, 310, 40, 40, "CB4");
        c5 = new CircleButton(this, 840, 390, 40, 40, "CB5");
-
+       cf = new CriticalFuel(this, 1500/2, 800/2, 500, 150, "Critical Low Fuel", "-- CODE : 818 --");
+    
     }
 
     public void draw()
@@ -110,6 +112,7 @@ public class UI extends PApplet
         c3.render();
         c4.render();
         c5.render();
+        //cf.render();
        // mc.update();
        // mc.render();
 

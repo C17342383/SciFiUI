@@ -2,7 +2,7 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 
-public class SpeedCircle
+public class CriticalFuel
 {
     UI ui;
     private float x;
@@ -10,8 +10,9 @@ public class SpeedCircle
     private float width;
     private float height;
     private String text;
+    private String text2;
 
-    public SpeedCircle(UI ui, float x, float y, float width, float height, String text)
+    public CriticalFuel(UI ui, float x, float y, float width, float height, String text, String text2)
     {
         this.ui = ui;
         this.x = x;
@@ -19,17 +20,16 @@ public class SpeedCircle
         this.width = width;
         this.height = height;
         this.text = text;
+        this.text2 = text2;
     }
 
     public void render()
     {
         ui.noFill();
-        ui.stroke(255);
-        ui.ellipse(x, y, width, height );
+        ui.stroke(255, 69, 0);
+        ui.rect(x - (width/2), y -(height/2), width, height);
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-        ui.text(text, x +5 , y + height -130);
-        ui.line(x - 86 , y + 50 , x + 86, y +50);
-        ui.line(x-80, y-50, x  , y+50);
-        ui.rect(x - 105, y - 105, width +10, height + 10);
+        ui.text(text , x + width * 0.02f, y - height * 0.1f);
+        ui.text(text2 , x + width * 0.02f, y + height * 0.2f);
     }
 }
