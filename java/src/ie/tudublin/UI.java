@@ -28,6 +28,10 @@ public class UI extends PApplet
     CircleButton c3;
     CircleButton c4;
     CircleButton c5;
+    CircleButton thc1;
+    CircleButton thc2;
+    CircleButton thc3;
+    CircleButton thc4;
     CriticalFuel cf;
     Thruster th1;
 
@@ -84,6 +88,11 @@ public class UI extends PApplet
        c5 = new CircleButton(this, 840, 390, 40, 40, "CB5");
        cf = new CriticalFuel(this, 1500/2, 800/2, 500, 150, "Critical Low Fuel", "-- CODE : 818 --");
        th1 = new Thruster(this, 500, 420, 100, 200, "Fuel % : ");
+
+       thc1 = new CircleButton(this, 1000, 730, 40, 40, "Stop TI");
+       thc2 = new CircleButton(this, 1100, 730, 40, 40, "Stop TII");
+       thc3 = new CircleButton(this, 1200, 730, 40, 40, "Stop TII");
+       thc4 = new CircleButton(this, 1300, 730, 40, 40, "Stop TII");
     
     }
 
@@ -118,6 +127,11 @@ public class UI extends PApplet
         //cf.render();
        // mc.update();
        // mc.render();
+
+       thc1.render();
+       thc2.render();
+       thc3.render();
+       thc4.render();
 
         r.render();
         r.update();
