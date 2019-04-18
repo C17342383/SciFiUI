@@ -23,40 +23,52 @@ public class Thruster
 
     public void render()
     {
+        float halfW = width/2;
+        float halfH = height/2;
+        float smallbox = 20;
         ui.noFill();
         ui.stroke(255);
         ui.rect(x, y, width, height/2);
-        ui.rect(x + (width/2)-10, y  -10, 20, 20);
-        ui.line(x-(width/6),x + height,y + 20, x +height/2 );
-        ui.line(x-(width/6),x +height,y + 40, y + height);
-        ui.line(x-(width/6) + 78,x +height,y + 115, y + height);
-        ui.line(x + width+17,x + height,y + 80, x +width );
-        ui.rect(x + (width/2)-10, y + height -10, 20, 20);
-        ui.line(x + height, y+ height, y+height, x+ width);
+        ui.rect(x + halfW - smallbox/2, y - smallbox/2, smallbox, smallbox);
+        float distin = width/4;
+        ui.line(x + distin , y + halfH, x - distin , y + height );
+        ui.line(x - distin , y + height, x + halfW - smallbox/2, y + height );
+        ui.rect(x + halfW - smallbox/2, y + height - smallbox/2, smallbox, smallbox);
+        ui.line(x + halfW +smallbox/2, y + height,x + halfW +smallbox/2 + halfW + distin , y+height );
+        ui.line(x + halfW +smallbox/2 + halfW + distin , y+height, x + distin*3, y + halfH);
+        
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text(text, x + width * 1.4f, y + height * 1.07f);
 
+        ui.line(x + width + halfW + distin*2 , y+height,x + width + halfW + distin*2, y + halfH );
+        //ui.line( y + halfH - distin, x + width + halfW + distin*2, y + halfH, x + width + halfW + distin*2);
+        //ui.line(y,x + halfH, y -distin, x + halfH);
+        //ui.line(  x + width + halfW + distin*2,y + halfH , x+ height - distin, y + halfH); //y - halfH - distin, x + height + distin );
+
+
+        ui.rect(x - distin*2, y+height + 30, height + distin, 20);
+        ui.rect(x - distin*2, y+height + 60, height + distin, 20);
+        ui.rect(x - distin*2, y+height + 90, height + distin, 20);
+
         int numLines = 3;
-        float gap =width/ numLines;
-        float x1 =y + width ;
+        float gap =halfH/ numLines;
+        float x1 =y + halfH ;
 		for(int l = 0 ; l <= numLines; l ++)
 		{
             //ui.line(x + height, x1, y + 180, x1);
-            ui.line(x+height, x1, y + 170 , x1);
+            ui.line(  x + width + halfW + distin*2,x1 , x+ height - distin, x1);
             x1 = x1+gap;
         }
         numLines = 6;
-        gap = (width/numLines)/2;
-        x1 =y+width + gap;
+        gap = (halfH/numLines)/2;
+        x1 =y + halfH + gap;
         for(int l = 0 ; l < numLines *2; l ++)
 		{
             //ui.line(x + height, x1, y + 180, x1);
-            ui.line(x+height, x1, y + 190 , x1);
+            ui.line(x+height - distin /2, x1,  x+height   , x1);
             x1 = x1+gap;
         }
 
-        ui.rect(x - 20, y+height + 30, 200, 20);
-        ui.rect(x - 20, y+height + 60, 200, 20);
-        ui.rect(x - 20, y+height + 90, 200, 20);
+
     }
 }
