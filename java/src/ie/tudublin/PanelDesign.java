@@ -42,5 +42,6 @@ public class PanelDesign
         }
 
        // ui.rect(600, 600, width -25, height -25);
+       ui.rect(halfW + gap + gap/2, 40, 590, height - 80);
     }
 }
