@@ -20,6 +20,7 @@ public class SpeedCircle
         this.height = height;
         this.text = text;
     }
+    float move = x-80;
 
     public void render()
     {
@@ -32,4 +33,21 @@ public class SpeedCircle
         ui.line(x-80, y-50, x  , y+50);
         ui.rect(x - 105, y - 105, width +10, height + 10);
     }
+
+   /* public void update()
+    {   
+        int r; 
+        double x1;
+
+        // insert random numbers between 0 and 99 into heap
+        for(int i = 1; i <= 10; ++i)  {
+           x1 =  (Math.random()*250.0);
+           r = (int) x1 /100; 
+           System.out.println("Inserting " + r);
+           move = move + r;
+           move = x-80;
+        }
+
+    }
+    */
 }

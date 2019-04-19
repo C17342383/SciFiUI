@@ -55,9 +55,10 @@ public class UI extends PApplet
 
     public void settings()
     {
-        //size(1530, 850);
+
+        size(1530, 850);
         // Use fullscreen instead of size to make your interface fullscreen
-        fullScreen(); 
+        //fullScreen(); 
         float height = 850;
         float width = 1530;
     }
@@ -98,8 +99,8 @@ public class UI extends PApplet
 
        thc1 = new CircleButton(this, 1050, 730, 40, 40, "Stop TI");
        thc2 = new CircleButton(this, 1150, 730, 40, 40, "Stop TII");
-       thc3 = new CircleButton(this, 1250, 730, 40, 40, "Stop TII");
-       thc4 = new CircleButton(this, 1350, 730, 40, 40, "Stop TII");
+       thc3 = new CircleButton(this, 1250, 730, 40, 40, "Stop TIII");
+       thc4 = new CircleButton(this, 1350, 730, 40, 40, "Stop TIV");
     
     }
 
@@ -108,6 +109,7 @@ public class UI extends PApplet
         background(0);
 
         sp.render();
+        //sp.update();
         sp2.render();
         sp3.render();
         sp4.render();
