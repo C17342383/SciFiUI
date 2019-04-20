@@ -159,6 +159,15 @@ public class UI extends PApplet
     float buttonWidth = 100;
     float buttonHeight = 50;
     float gap = 200;
+    float thrustervar1 = 960;
+    float thrustervar2 = 1265;
+    float thrustervar3 = 285;
+    float thrustervar4 = 635;
+    float thrusterButtonWidth = 150;
+    float thrustergap1 = 305;
+    float thrustergap2 = 350;
+
+
 
     public void mouseClicked()
     {
@@ -210,6 +219,58 @@ public class UI extends PApplet
         {
             System.out.println("which ! = -1");
         }
+
+
+        //Thruster Buttons
+    
+        if ((mouseX > thrustervar1 && mouseX < thrustervar1 + thrusterButtonWidth ))
+        {
+            if ((mouseY - thrustervar3) % (buttonHeight + thrustergap1) < buttonHeight)
+            {
+                System.out.println("mouseY" + mouseY);
+                System.out.println("mouseX" + mouseX);
+                which = (int) ((mouseY - border) / (buttonHeight + gap));
+                System.out.println("which :" + which);
+                System.out.println("I");
+            }
+        }
+
+        if ((mouseX > thrustervar2 && mouseX < thrustervar2 + thrusterButtonWidth))
+        {
+            if ((mouseY - thrustervar3) % (buttonHeight + thrustergap1) < buttonHeight)
+            {
+                System.out.println("mouseY" + mouseY);
+                System.out.println("mouseX" + mouseX);
+                which = (int) ((mouseY - border) / (buttonHeight + gap));
+                System.out.println("which :" + which);
+                System.out.println("II");
+            }
+        }
+
+        if ((mouseX > thrustervar1 && mouseX < thrustervar1 + thrusterButtonWidth))
+        {
+            if ((mouseY - thrustervar4) % (buttonHeight + thrustergap1) < buttonHeight)
+            {
+                System.out.println("mouseY" + mouseY);
+                System.out.println("mouseX" + mouseX);
+                which = (int) ((mouseY - border) / (buttonHeight + gap));
+                System.out.println("which :" + which);
+                System.out.println("III");
+            }
+        }
+
+        if ((mouseX > thrustervar2 && mouseX < thrustervar2 + thrusterButtonWidth))
+        {
+            if ((mouseY - thrustervar4) % (buttonHeight + thrustergap1) < buttonHeight)
+            {
+                System.out.println("mouseY" + mouseY);
+                System.out.println("mouseX" + mouseX);
+                which = (int) ((mouseY - border) / (buttonHeight + gap));
+                System.out.println("which :" + which);
+                System.out.println("IV");
+            }
+        }
+
     }
 }
 
