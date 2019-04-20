@@ -43,5 +43,16 @@ public class PanelDesign
 
        // ui.rect(600, 600, width -25, height -25);
        ui.rect(halfW + gap + gap/2, 40, 590, height - 80);
+       ui.ellipse(halfW + gap + gap/2 + 13, 53, 10, 10);
+       ui.ellipse(halfW + gap + gap/2 + 13, height -53, 10, 10);
+       ui.ellipse(halfW + gap + gap/2 + 590 - 13, height -53, 10, 10);
+       ui.ellipse(halfW + gap + gap/2 + 590 - 13, 53, 10, 10);
+    
+
+
+       ui.ellipse(13, 13, 10, 10);
+       ui.ellipse(width - 13, 13, 10, 10);
+       ui.ellipse(width - 13, height -13, 10, 10);
+       ui.ellipse(13, height -13, 10, 10);
     }
 }
