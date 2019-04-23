@@ -20,7 +20,9 @@ public class PanelDesign
         float halfH = height /2;
         ui.noFill();
         ui.stroke(255);
+        //ui.fill(29, 28, 40);
         ui.rect(20, 20 , width -40, height - 40 );
+        //ui.noFill();
         ui.rect(30, 30, halfW , halfH );
 
         int numLines = 10;

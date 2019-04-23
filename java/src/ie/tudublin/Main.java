@@ -13,6 +13,7 @@ public class Main {
 		processing.core.PApplet.runSketch(a, new PlanetMap());
 	}
 
+
 	public static void main(String[] args)
 	{
 		Main main = new Main();
