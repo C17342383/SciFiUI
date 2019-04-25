@@ -171,7 +171,7 @@ public class UI extends PApplet
     {
         System.out.println("in load Aline");
         loadAlien();
-        printAlien();
+        //printAlien();
         
         //Thruster Buttons
         int which = -1;
@@ -276,6 +276,24 @@ public class UI extends PApplet
                 System.out.println("Orbit");
             }
                     
+        }
+
+
+        int stop = -1;
+        float xborder = 1160;
+        float yborder = 240 ; 
+        float stopbuttonWidth = 40;
+        float stopbuttonHeight = 40;
+        float stopgap = 180;
+        //Thruster Stop Buttons
+        if ((mouseX > xborder && mouseX < xborder + stopbuttonWidth))
+        {
+            if ((mouseY - xborder) % (stopbuttonHeight + stopgap) < stopbuttonHeight)
+            {
+                System.out.println("Mouse X : "+ mouseX);
+                System.out.println("Mouse Y : "+ mouseY);
+                stop = (int) ((mouseY - xborder) / (stopbuttonHeight + stopgap));
+            }
         }
 
 
