@@ -34,6 +34,9 @@ public class UI extends PApplet
     CircleButton thc4;
     CriticalFuel cf;
     Thruster th1;
+    Thruster th2;
+    Thruster th3;
+    Thruster th4;
 
     boolean[] keys = new boolean[1024];
 
@@ -91,7 +94,10 @@ public class UI extends PApplet
        c4 = new CircleButton(this, 840, 329, 40, 40, "CB4");
        c5 = new CircleButton(this, 840, 410, 40, 40, "CB5");
        cf = new CriticalFuel(this, 1500/2, 800/2, 500, 150, "Critical Low Fuel", "-- CODE : 818 --");
-       th1 = new Thruster(this, 500, 420, 100, 200, "Fuel % : ");
+       th1 = new Thruster(this, 170, 50, 100, 200, "Fuel % : ");
+       th2 = new Thruster(this, 550, 50, 100, 200, "Fuel % : ");
+       th3 = new Thruster(this, 170, 410, 100, 200, "Fuel % : ");
+       th4 = new Thruster(this, 550, 410, 100, 200, "Fuel % : ");
 
        thc1 = new CircleButton(this, 1050, 730, 40, 40, "Stop TI");
        thc2 = new CircleButton(this, 1150, 730, 40, 40, "Stop TII");
@@ -129,6 +135,9 @@ public class UI extends PApplet
         //t5.render();
 
         th1.render();
+        th2.render();
+        th3.render();
+        th4.render();
         //cf.render();
        // mc.update();
        // mc.render();
