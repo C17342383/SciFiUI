@@ -1,6 +1,9 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
+import java.util.ArrayList;
+import processing.data.Table;
+import processing.data.TableRow;
 
 public class UI extends PApplet
 {
@@ -166,6 +169,10 @@ public class UI extends PApplet
 
     public void mouseClicked()
     {
+        System.out.println("in load Aline");
+        loadAlien();
+        printAlien();
+        
         //Thruster Buttons
         int which = -1;
 
@@ -269,6 +276,28 @@ public class UI extends PApplet
                 System.out.println("Orbit");
             }
                     
+        }
+
+
+
+    }
+    ArrayList<Alien> variabletemp = new ArrayList<Alien>();
+
+    public void loadAlien()
+    {
+        Table table = loadTable("Alien.csv", "header");
+        for(TableRow tabler:table.rows())
+        {
+            Alien a = new Alien(tabler);
+            variabletemp.add(a);
+            
+        }        
+    }
+
+    void printAlien()
+    {
+        for (Alien a : variabletemp) {
+            System.out.println(a);
         }
     }
 }

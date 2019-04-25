@@ -4,6 +4,9 @@ import processing.core.PApplet;
 import processing.core.PVector;
 import processing.core.*;
 import processing.*;
+import java.util.ArrayList;
+import processing.data.Table;
+import processing.data.TableRow;
 
 public class SpeedCircle
 {
@@ -51,6 +54,7 @@ public class SpeedCircle
         //ui.translate(pos.x, pos.y);
         //ui.rotate(rotation);
         //ui.line(x , y + 50,xr, yr);
+
         
     }
 
@@ -60,5 +64,6 @@ public class SpeedCircle
         this.y = (int) -(float) Math.cos(rotation);
         rotation += 0.0039f;
     }
+
     
 }
