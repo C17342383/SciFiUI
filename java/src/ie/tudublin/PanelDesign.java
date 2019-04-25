@@ -23,7 +23,7 @@ public class PanelDesign
         //ui.fill(29, 28, 40);
         ui.rect(20, 20 , width -40, height - 40 );
         //ui.noFill();
-        ui.rect(30, 30, halfW  , halfH );
+        ui.rect(30, 30, halfW , halfH +halfH/2 + halfH/6);
 
         int numLines = 10;
         float gap = halfW / numLines;
@@ -31,11 +31,11 @@ public class PanelDesign
 		for(int l = 0 ; l < numLines; l ++)
 		{
 			x = x + gap;
-			ui.line(x, 30, x, halfH + 30);
+			ui.line(x, 30, x, halfH  +halfH/2 + halfH/6 + 30);
         }
         
-        numLines = 5;
-        gap = halfH / numLines;
+        numLines = 8;
+        gap = (halfH  +halfH/2 + halfH/6) / numLines;
         x = 30;
         for(int l = 0 ; l < numLines; l ++)
 		{
