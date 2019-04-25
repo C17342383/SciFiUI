@@ -69,6 +69,12 @@ public class Thruster
             x1 = x1+gap;
         }
 
+        float down  = x + height - distin;
+        ui.rect(down, y + halfH,distin, halfH);
+    }
 
+    public void update()
+    {
+        //down = down - gap;
     }
 }
