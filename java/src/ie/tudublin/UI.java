@@ -102,10 +102,10 @@ public class UI extends PApplet
        th3 = new Thruster(this, 170, 410, 100, 200, "Fuel % : ");
        th4 = new Thruster(this, 550, 410, 100, 200, "Fuel % : ");
 
-       thc1 = new CircleButton(this, 1050, 730, 40, 40, " TI");
-       thc2 = new CircleButton(this, 1150, 730, 40, 40, " TII");
-       thc3 = new CircleButton(this, 1250, 730, 40, 40, " TIII");
-       thc4 = new CircleButton(this, 1350, 730, 40, 40, " TIV");
+       thc1 = new CircleButton(this, 1160, 240, 40, 40, " TI");
+       thc2 = new CircleButton(this, 1160, 320, 40, 40, " TII");
+       thc3 = new CircleButton(this, 1160, 400, 40, 40, " TIII");
+       thc4 = new CircleButton(this, 1160, 480, 40, 40, " TIV");
     
     }
 
