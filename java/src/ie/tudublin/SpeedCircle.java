@@ -1,6 +1,7 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
+import processing.core.PVector;
 
 public class SpeedCircle
 {
@@ -10,6 +11,8 @@ public class SpeedCircle
     private float width;
     private float height;
     private String text;
+    private PVector pos;
+    private float rotation;
 
     public SpeedCircle(UI ui, float x, float y, float width, float height, String text)
     {
@@ -19,6 +22,7 @@ public class SpeedCircle
         this.width = width;
         this.height = height;
         this.text = text;
+        pos = new PVector(x, y);
     }
     float move = x-80;
 
@@ -26,28 +30,23 @@ public class SpeedCircle
     {
         ui.noFill();
         ui.stroke(255);
-        ui.ellipse(x, y, width, height );
+        ui.ellipse(pos.x, pos.y, width, height );
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-        ui.text(text, x +5 , y + height -130);
-        ui.line(x - 86 , y + 50 , x + 86, y +50);
+        ui.text(text, pos.x +5 , pos.y + height -130);
+        ui.line(pos.x - 86 , pos.y + 50 , pos.x + 86, pos.y +50);
+        ui.pushMatrix();
+        ui.translate(pos.x, pos.y);
+        ui.rotate(rotation);
         ui.line(x-80, y-50, x  , y+50);
-        ui.rect(x - 105, y - 105, width +10, height + 10);
+        ui.popMatrix();
+        ui.rect(pos.x - 105, pos.y - 105, width + 10, height + 10);
     }
 
-   /* public void update()
-    {   
-        int r; 
-        double x1;
-
-        // insert random numbers between 0 and 99 into heap
-        for(int i = 1; i <= 10; ++i)  {
-           x1 =  (Math.random()*250.0);
-           r = (int) x1 /100; 
-           System.out.println("Inserting " + r);
-           move = move + r;
-           move = x-80;
-        }
-
+    public void update()
+    {
+        this.x=(int) Math.sin(rotation);
+        this.y = (int) -(float) Math.cos(rotation);
+        rotation += 0.0039f;
     }
-    */
+    
 }

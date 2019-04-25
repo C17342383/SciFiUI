@@ -111,7 +111,7 @@ public class UI extends PApplet
         background(0);
 
         sp.render();
-        //sp.update();
+        sp.update();
         sp2.render();
         sp3.render();
         sp4.render();
