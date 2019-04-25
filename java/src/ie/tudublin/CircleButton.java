@@ -25,7 +25,7 @@ public class CircleButton
     {
         ui.noFill();
         ui.stroke(255);
-        ui.ellipse(x, y, width, height);
+        ui.rect(x, y, width, height);
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text(text, x + width * 0.5f, y + height * 0.5f);
     }
