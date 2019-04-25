@@ -23,7 +23,7 @@ public class PanelDesign
         //ui.fill(29, 28, 40);
         ui.rect(20, 20 , width -40, height - 40 );
         //ui.noFill();
-        ui.rect(30, 30, halfW , halfH );
+        ui.rect(30, 30, halfW  , halfH );
 
         int numLines = 10;
         float gap = halfW / numLines;

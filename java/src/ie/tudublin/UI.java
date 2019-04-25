@@ -65,9 +65,9 @@ public class UI extends PApplet
 
     public void setup()
     {
-        b = new Button(this, 150, 460, 100, 50, "Station");
-        b2 = new Button(this, 350, 460, 100, 50, "Thrusters");
-        b3 = new Button(this, 550, 460, 100, 50, "Orbit");
+        b = new Button(this, 150, 750, 100, 50, "Station");
+        b2 = new Button(this, 350, 750, 100, 50, "Thrusters");
+        b3 = new Button(this, 550, 750, 100, 50, "Orbit");
         buttonE1 = new Button(this, 960, 300, 150, 50, "Launch Thruster I");
         buttonE2 = new Button(this, 1265, 300, 150, 50, "Launch Thruster II");
         buttonE3 = new Button(this, 960, 650, 150, 50, "Launch Thruster III");
@@ -152,23 +152,25 @@ public class UI extends PApplet
         }
     }
 
-    float border = 300;
+    float thborder = 300;
+    float inborder = 960;
+    float ininborder = 1265;
     float buttonWidth = 150;
     float buttonHeight = 50;
     float gap = 300;
 
     public void mouseClicked()
     {
+
         int which = -1;
 
-        // The best way!!
-        if ((mouseX > border && mouseX < border*3 + buttonWidth))
+        if ((mouseX > inborder && mouseX < inborder + buttonWidth))
         {
-            if ((mouseY - border) % (buttonHeight + gap) < buttonHeight)
+            if ((mouseY - thborder) % (buttonHeight + gap) < buttonHeight)
             {
                 //System.out.println("Mouse X : "+ mouseX);
                 //System.out.println("Mouse Y : "+ mouseY);
-                which = (int) ((mouseY - border) / (buttonHeight + gap));
+                which = (int) ((mouseY - thborder) / (buttonHeight + gap));
             }
         }
 
@@ -186,13 +188,13 @@ public class UI extends PApplet
             
         }
 
-        if ((mouseX > border && mouseX < border*4 + buttonWidth*2))
+        if ((mouseX > ininborder && mouseX < ininborder + buttonWidth*2))
         {
-            if ((mouseY - border) % (buttonHeight + gap) < buttonHeight)
+            if ((mouseY - thborder) % (buttonHeight + gap) < buttonHeight)
             {
                 //System.out.println("Mouse X : "+ mouseX);
                 //System.out.println("Mouse Y : "+ mouseY);
-                which = (int) ((mouseY - border) / (buttonHeight + gap));
+                which = (int) ((mouseY - thborder) / (buttonHeight + gap));
             }
         }
 
@@ -211,12 +213,78 @@ public class UI extends PApplet
         }
 
 
-
-        //Thruster Buttons
-
-
-        //Stop Thruster Buttons
-
+        //Panel buttons
+                //Panel Buttons
+                int which1 = -1;
+                float pborder = 150;
+                float pborder2 = 750;
+                gap = 200;
+                buttonWidth = 100;
+                double add = 0.4;
+        
+                if ((mouseX > pborder && mouseX < pborder + buttonWidth))
+                {
+                    //System.out.println("First if");
+                    //System.out.println("Mouse X : "+ mouseX);
+                    //System.out.println("Mouse Y : "+ mouseY);
+                    if ((mouseY - pborder2) % (buttonHeight + gap) < buttonHeight)
+                    {
+                        //System.out.println("Mouse X : "+ mouseX);
+                        //System.out.println("Mouse Y : "+ mouseY);
+                        which1 = (int) ((mouseX - pborder) / (buttonHeight + gap));
+                        //System.out.println(" station which1 : " + which1);
+                    }
+                }
+                
+                pborder = 350;
+                if ((mouseX > pborder && mouseX < pborder + buttonWidth))
+                {
+                    //System.out.println("First if");
+                    //System.out.println("Mouse X : "+ mouseX);
+                    //System.out.println("Mouse Y : "+ mouseY);
+                    if ((mouseY - pborder2) % (buttonHeight + gap) < buttonHeight)
+                    {
+                        //System.out.println("Mouse X : "+ mouseX);
+                        //System.out.println("Mouse Y : "+ mouseY);
+                        which1 = (int) ((mouseX - pborder) / (buttonHeight + gap)+1);
+                        //System.out.println(" thrusters which1 : " + which1);
+                    }
+                }
+        
+                pborder = 550;
+                if ((mouseX > pborder && mouseX < pborder + buttonWidth))
+                {
+                    //System.out.println("First if");
+                    //System.out.println("Mouse X : "+ mouseX);
+                    //System.out.println("Mouse Y : "+ mouseY);
+                    if ((mouseY - pborder2) % (buttonHeight + gap) < buttonHeight)
+                    {
+                        //System.out.println("Mouse X : "+ mouseX);
+                        //System.out.println("Mouse Y : "+ mouseY);
+                        which1 = (int) ((mouseX - pborder) / (buttonHeight + gap)+2);
+                        //System.out.println(" orbit which1 : " + which1);
+                    }
+                }
+                //which1 = (int) (which1 + add);
+                //System.out.println("which1 : " + which1);
+                if (which1 != -1 )
+                {
+                    if(which1 == 0 )
+                    {
+                        System.out.println("Station");
+                    }
+        
+                    if(which1 == 1)
+                    {
+                        System.out.println("Thrusters");
+                    }
+                    if(which1 == 2)
+                    {
+                        System.out.println("Orbit");
+                    }
+                    
+                }
+            
 
 
 
