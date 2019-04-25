@@ -2,6 +2,8 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 import processing.core.PVector;
+import processing.core.*;
+import processing.*;
 
 public class SpeedCircle
 {
@@ -25,6 +27,9 @@ public class SpeedCircle
         pos = new PVector(x, y);
     }
     float move = x-80;
+    float radius = 100;
+    //float xr = pos.x - 40;
+    //float yr = pos.y +100;
 
     public void render()
     {
@@ -34,12 +39,19 @@ public class SpeedCircle
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text(text, pos.x +5 , pos.y + height -130);
         ui.line(pos.x - 86 , pos.y + 50 , pos.x + 86, pos.y +50);
-        ui.pushMatrix();
-        ui.translate(pos.x, pos.y);
-        ui.rotate(rotation);
-        ui.line(x-80, y-50, x  , y+50);
-        ui.popMatrix();
+        //ui.pushMatrix();
+        //ui.translate(pos.x, pos.y);
+        //ui.rotate(ui.radians(45));
+        //ui.rotate(rotation);
+        ui.line(pos.x-80, pos.y-50, pos.x  , pos.y+50);
+        //ui.line(pos.x, pos.y, xr  , yr);
+        //ui.popMatrix();
         ui.rect(pos.x - 105, pos.y - 105, width + 10, height + 10);
+
+        //ui.translate(pos.x, pos.y);
+        //ui.rotate(rotation);
+        //ui.line(x , y + 50,xr, yr);
+        
     }
 
     public void update()
