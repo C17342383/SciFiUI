@@ -51,7 +51,7 @@ public class SpeedCircle
         ui.translate(pos.x, pos.y);
         //ui.rotate(rotation);
         ui.rotate(arcAngle);
-        ui.line(0 , 0 ,x+40, y+60);
+        ui.line(0 , 0 ,50, 40);
         ui.popMatrix();
 
 
