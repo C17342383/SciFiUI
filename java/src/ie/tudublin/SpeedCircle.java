@@ -74,8 +74,8 @@ public class SpeedCircle
 
         for (int i=0; i< 33; i++) {
             change = change + 5;
-            ui.line(change, pos.y+10, pos.x  , pos.y+50);
         }
+        ui.line(change, pos.y+10, pos.x  , pos.y+50);
     }
 
     
