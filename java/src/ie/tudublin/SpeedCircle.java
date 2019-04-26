@@ -7,6 +7,7 @@ import processing.*;
 import java.util.ArrayList;
 import processing.data.Table;
 import processing.data.TableRow;
+import javax.swing.*;
 
 public class SpeedCircle
 {
@@ -43,7 +44,7 @@ public class SpeedCircle
         ui.text(text, pos.x +5 , pos.y + height -130);
         ui.line(pos.x - 86 , pos.y + 50 , pos.x + 86, pos.y +50);
         //ui.pushMatrix();
-        //ui.translate(pos.x, pos.y);
+        //ui.translate(pos.x +80, pos.y+50);
         //ui.rotate(ui.radians(45));
         //ui.rotate(rotation);
         ui.line(pos.x-80, pos.y-50, pos.x  , pos.y+50);
@@ -54,6 +55,11 @@ public class SpeedCircle
         //ui.translate(pos.x, pos.y);
         //ui.rotate(rotation);
         //ui.line(x , y + 50,xr, yr);
+
+        int startAngle = 0;
+        int arcAngle = 90;
+        ui.arc(pos.x + 100, pos.y+100, 50, 50, startAngle, ui.PI/2);
+        ui.arc(pos.x + 200, pos.y+100, 50, 50, 0, ui.radians(270));
 
         
     }

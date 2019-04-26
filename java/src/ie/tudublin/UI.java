@@ -106,11 +106,14 @@ public class UI extends PApplet
        thc2 = new CircleButton(this, 1160, 320, 40, 40, " TII");
        thc3 = new CircleButton(this, 1160, 400, 40, 40, " TIII");
        thc4 = new CircleButton(this, 1160, 480, 40, 40, " TIV");
+
+
     
     }
 
     public void draw()
     {
+
         background(0);
 
         sp.render();
@@ -318,5 +321,6 @@ public class UI extends PApplet
             System.out.println(a);
         }
     }
+
 }
 
