@@ -46,20 +46,12 @@ public class SpeedCircle
         ui.text(text, pos.x +5 , pos.y + height -130);
         ui.line(pos.x - 86 , pos.y + 50 , pos.x + 86, pos.y +50);
         ui.pushMatrix();
-        //ui.translate(pos.x , pos.y);
-        //ui.rotate(ui.radians(45));
-        //ui.rotate(rotation);
         change = pos.x-80;
         ui.line(change, pos.y+10, pos.x  , pos.y+50);
-        //ui.line(pos.x, pos.y, xr  , yr);
         ui.translate(pos.x, pos.y);
         //ui.rotate(rotation);
         ui.rotate(arcAngle);
         ui.line(0 , 0 ,x+40, y+60);
-        while(arcAngle != 300)
-        {
-            arcAngle = arcAngle + 1;
-        }
         ui.popMatrix();
 
 
@@ -77,6 +69,11 @@ public class SpeedCircle
         this.x=(int) Math.sin(rotation);
         this.y = (int) -(float) Math.cos(rotation);
         rotation += 0.000000000000001f;
+
+        while(arcAngle != 300)
+        {
+            arcAngle = arcAngle + 1;
+        }
 
         for (int i=0; i< 33; i++) {
             change = change + 5;
