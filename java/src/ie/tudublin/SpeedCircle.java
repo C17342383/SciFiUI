@@ -44,18 +44,21 @@ public class SpeedCircle
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text(text, pos.x +5 , pos.y + height -130);
         ui.line(pos.x - 86 , pos.y + 50 , pos.x + 86, pos.y +50);
-        //ui.pushMatrix();
-        //ui.translate(pos.x +80, pos.y+50);
+        ui.pushMatrix();
+        //ui.translate(pos.x , pos.y);
         //ui.rotate(ui.radians(45));
         //ui.rotate(rotation);
         change = pos.x-80;
         ui.line(change, pos.y+10, pos.x  , pos.y+50);
         //ui.line(pos.x, pos.y, xr  , yr);
-        //ui.popMatrix();
+        ui.translate(pos.x, pos.y);
+        ui.rotate(rotation);
+        ui.line(x , y ,x+40, y+60);
+        ui.popMatrix();
         ui.rect(pos.x - 105, pos.y - 105, width + 10, height + 10);
 
         //ui.translate(pos.x, pos.y);
-        //ui.rotate(rotation);
+        //ui.rotate(ui.radians(90));
         //ui.line(x , y + 50,xr, yr);
 
         int startAngle = 0;
