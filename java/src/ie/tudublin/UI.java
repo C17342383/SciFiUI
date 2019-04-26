@@ -152,8 +152,8 @@ public class UI extends PApplet
        thc3.render();
        thc4.render();
 
-       r.render();
-       r.update();
+       //r.render();
+       //r.update();
 
 
         if (checkKey(LEFT))
@@ -195,6 +195,7 @@ public class UI extends PApplet
             {
                 System.out.println("Thruster 1");
                 sp.update();
+                th1.update();
             }
 
             if(which == 1 && mouseX <= 1110)
@@ -220,6 +221,7 @@ public class UI extends PApplet
             if(which == 0 && mouseX >=1265)
             {
                 System.out.println("Thruster 2");
+                sp2.update();
             }
 
             if(which == 1 && mouseX >=1265)

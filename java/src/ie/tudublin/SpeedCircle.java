@@ -47,7 +47,7 @@ public class SpeedCircle
         ui.line(pos.x - 86 , pos.y + 50 , pos.x + 86, pos.y +50);
         ui.pushMatrix();
         change = pos.x-80;
-        ui.line(change, pos.y+10, pos.x  , pos.y+50);
+        //ui.line(change, pos.y+10, pos.x  , pos.y+50);
         ui.translate(pos.x, pos.y);
         //ui.rotate(rotation);
         ui.rotate(arcAngle);

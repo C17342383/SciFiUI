@@ -10,6 +10,8 @@ public class Thruster
     private float width;
     private float height;
     private String text;
+    public float down;
+    public float downgap;
 
     public Thruster(UI ui, float x, float y, float width, float height, String text)
     {
@@ -19,10 +21,14 @@ public class Thruster
         this.width = width;
         this.height = height;
         this.text = text;
+        down = height /2;
+        downgap = ((height/2)/6)/2;
     }
+    //float down = x + height + width/4;
 
     public void render()
     {
+        System.out.println("Down : " + down);
         float halfW = width/2;
         float halfH = height/2;
         float smallbox = 20;
@@ -69,12 +75,15 @@ public class Thruster
             x1 = x1+gap;
         }
 
-        float down  = x + height - distin;
-        ui.rect(down, y + halfH,distin, halfH);
+        ui.pushMatrix();
+        //float down = x+ height - distin;
+        ui.rect(x + height -(distin) , y + halfH ,distin, down);
+        ui.popMatrix();
     }
+    
 
     public void update()
     {
-        //down = down - gap;
+        down = down - downgap;
     }
 }
