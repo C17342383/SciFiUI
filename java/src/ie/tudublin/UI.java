@@ -117,7 +117,6 @@ public class UI extends PApplet
         background(0);
 
         sp.render();
-        sp.update();
         sp2.render();
         sp3.render();
         sp4.render();
@@ -195,6 +194,7 @@ public class UI extends PApplet
             if(which == 0 && mouseX <= 1110)
             {
                 System.out.println("Thruster 1");
+                sp.update();
             }
 
             if(which == 1 && mouseX <= 1110)
