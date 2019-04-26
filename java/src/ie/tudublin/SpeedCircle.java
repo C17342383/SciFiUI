@@ -19,6 +19,7 @@ public class SpeedCircle
     private String text;
     private PVector pos;
     private float rotation;
+    public float change;
 
     public SpeedCircle(UI ui, float x, float y, float width, float height, String text)
     {
@@ -47,7 +48,8 @@ public class SpeedCircle
         //ui.translate(pos.x +80, pos.y+50);
         //ui.rotate(ui.radians(45));
         //ui.rotate(rotation);
-        ui.line(pos.x-80, pos.y-50, pos.x  , pos.y+50);
+        change = pos.x-80;
+        ui.line(change, pos.y+10, pos.x  , pos.y+50);
         //ui.line(pos.x, pos.y, xr  , yr);
         //ui.popMatrix();
         ui.rect(pos.x - 105, pos.y - 105, width + 10, height + 10);
@@ -58,8 +60,8 @@ public class SpeedCircle
 
         int startAngle = 0;
         int arcAngle = 90;
-        ui.arc(pos.x + 100, pos.y+100, 50, 50, startAngle, ui.PI/2);
-        ui.arc(pos.x + 200, pos.y+100, 50, 50, 0, ui.radians(270));
+        //ui.arc(pos.x + 100, pos.y+100, 50, 50, startAngle, ui.PI/2);
+        ui.arc(pos.x , pos.y, 150, 150, ui.radians(180), ui.radians(360));
 
         
     }
@@ -69,6 +71,11 @@ public class SpeedCircle
         this.x=(int) Math.sin(rotation);
         this.y = (int) -(float) Math.cos(rotation);
         rotation += 0.0039f;
+
+        for (int i=0; i< 33; i++) {
+            change = change + 5;
+            ui.line(change, pos.y+10, pos.x  , pos.y+50);
+        }
     }
 
     
