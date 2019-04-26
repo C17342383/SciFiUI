@@ -35,6 +35,7 @@ public class SpeedCircle
     float radius = 100;
     //float xr = pos.x - 40;
     //float yr = pos.y +100;
+    int arcAngle = 180;
 
     public void render()
     {
@@ -52,17 +53,19 @@ public class SpeedCircle
         ui.line(change, pos.y+10, pos.x  , pos.y+50);
         //ui.line(pos.x, pos.y, xr  , yr);
         ui.translate(pos.x, pos.y);
-        ui.rotate(rotation);
-        ui.line(x , y ,x+40, y+60);
+        //ui.rotate(rotation);
+        ui.rotate(arcAngle);
+        ui.line(0 , 0 ,x+40, y+60);
+        while(arcAngle != 300)
+        {
+            arcAngle = arcAngle + 1;
+        }
         ui.popMatrix();
+
+
         ui.rect(pos.x - 105, pos.y - 105, width + 10, height + 10);
-
-        //ui.translate(pos.x, pos.y);
-        //ui.rotate(ui.radians(90));
-        //ui.line(x , y + 50,xr, yr);
-
         int startAngle = 0;
-        int arcAngle = 90;
+    
         //ui.arc(pos.x + 100, pos.y+100, 50, 50, startAngle, ui.PI/2);
         ui.arc(pos.x , pos.y, 150, 150, ui.radians(180), ui.radians(360));
 
@@ -73,7 +76,7 @@ public class SpeedCircle
     {
         this.x=(int) Math.sin(rotation);
         this.y = (int) -(float) Math.cos(rotation);
-        rotation += 0.0039f;
+        rotation += 0.000000000000001f;
 
         for (int i=0; i< 33; i++) {
             change = change + 5;
