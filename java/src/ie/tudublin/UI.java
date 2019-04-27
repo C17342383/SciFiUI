@@ -79,7 +79,7 @@ public class UI extends PApplet
         buttonE3 = new Button(this, 960, 650, 150, 50, "Launch Thruster III");
         buttonE4 = new Button(this, 1265, 650, 150, 50, "Launch Thruster IV");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
-        r = new Radar(this, 200, 650, 200);
+        r = new Radar(this, 200, 600, 200);
         p = new PanelDesign(this, 1530, 850);
        sp = new SpeedCircle(this, width - 500, height - 700, 200, 200, "Thruster I");
        sp2 = new SpeedCircle(this, width - 200, height - 700, 200, 200, "Thruster II");
@@ -138,11 +138,6 @@ public class UI extends PApplet
         //t3.render();
         //t4.render();
         //t5.render();
-
-        th1.render();
-        th2.render();
-        th3.render();
-        th4.render();
         //cf.render();
        // mc.update();
        // mc.render();
@@ -152,8 +147,23 @@ public class UI extends PApplet
        thc3.render();
        thc4.render();
 
-       //r.render();
-       //r.update();
+       if(choose == 0)
+       {
+            r.render();
+            r.update();
+
+       }
+       if(choose == 1)
+       {
+            th1.render();
+            th2.render();
+            th3.render();
+            th4.render(); 
+       }
+       if(choose == 2)
+       {
+           
+       }
 
 
         if (checkKey(LEFT))
@@ -161,6 +171,8 @@ public class UI extends PApplet
             System.out.println("Left arrow key pressed");
         }
     }
+
+    int choose;
 
     float thborder = 300;
     float inborder = 960;
@@ -191,20 +203,10 @@ public class UI extends PApplet
         
         if ((mouseX > pborder && mouseX < pborder + pbuttonWidth))
         {
-                    //float check1 = mouseY - pborder2;
-                    //float check2 = buttonHeight + pgap;
-                    //float check3 = check1 % check2;
-                    //float check4 = (mouseY - (pborder2)) % (buttonHeight + pgap);
-                    //System.out.println("Mouse Y - pborder : "+  check1);
-                    //System.out.println("check2 : "+  check2);
-                    //System.out.println("check3 : "+  check3);
-                    //System.out.println("check4 : "+  check4);
-                    //System.out.println(" XX Mouse X : "+ mouseX);
-                    //System.out.println("XX Mouse Y : "+ mouseY);
             if (((mouseY - pborder2) % (buttonHeight + pgap)) < buttonHeight)
             {
-                System.out.println("YY Mouse X : "+ mouseX);
-                System.out.println("YY Mouse Y : "+ mouseY);
+                //System.out.println("YY Mouse X : "+ mouseX);
+                //System.out.println("YY Mouse Y : "+ mouseY);
                  which1 = (int) ((mouseY - pborder2) / (buttonHeight + pgap));
                 System.out.println(" which1 : " + which1);
             }
@@ -218,15 +220,18 @@ public class UI extends PApplet
             if(which1 == 0 )
             {
                 System.out.println("Station");
+                choose = 0;
             }
         
             if(which1 == 1)
             {
                 System.out.println("Thrusters");
+                choose = 1;
             }
             if(which1 == 2)
             {
                 System.out.println("Orbit");
+                choose = 2;
             }
                     
         }
