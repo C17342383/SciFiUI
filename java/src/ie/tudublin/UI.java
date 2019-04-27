@@ -36,10 +36,11 @@ public class UI extends PApplet
     CircleButton thc3;
     CircleButton thc4;
     CriticalFuel cf;
-    Thruster th1;
-    Thruster th2;
-    Thruster th3;
-    Thruster th4;
+    public Thruster th1;
+    public Thruster th2;
+    public Thruster th3;
+    public Thruster th4;
+    SpeedCircle t ;
 
     boolean[] keys = new boolean[1024];
 
@@ -62,9 +63,9 @@ public class UI extends PApplet
     public void settings()
     {
 
-        size(1530, 850);
+        //size(1530, 850);
         // Use fullscreen instead of size to make your interface fullscreen
-        //fullScreen(); 
+        fullScreen(); 
         float height = 850;
         float width = 1530;
     }
@@ -115,24 +116,32 @@ public class UI extends PApplet
     {
 
         background(0);
-
+        //Panel Design
+        p.render();
+        //Panel Buttons
+        b.render();
+        b2.render();
+        b3.render();
+        //Dial Interface
         sp.render();
         sp2.render();
         sp3.render();
         sp4.render();
+        //Launch Thruster Buttons
+        buttonE1.render();
+        buttonE2.render();
+        buttonE3.render();
+        buttonE4.render();
+        //Stop Thruster Buttons
+        thc1.render();
+        thc2.render();
+        thc3.render();
+        thc4.render();
         //c1.render();
         //c2.render();
         //c3.render();
         //c4.render();
         //c5.render();
-        p.render();
-        b.render();
-        b2.render();
-        b3.render();
-        buttonE1.render();
-        buttonE2.render();
-        buttonE3.render();
-        buttonE4.render();
         //t1.render();
         //t2.render();
         //t3.render();
@@ -141,11 +150,6 @@ public class UI extends PApplet
         //cf.render();
        // mc.update();
        // mc.render();
-
-       thc1.render();
-       thc2.render();
-       thc3.render();
-       thc4.render();
 
        if(choose == 0)
        {
@@ -238,6 +242,7 @@ public class UI extends PApplet
 
         //Thruster Stop Buttons
         int stop = -1;
+        int s = 0;
 
         if ((mouseX > xborder && mouseX < xborder + stopbuttonWidth))
         {
@@ -254,19 +259,31 @@ public class UI extends PApplet
         {
             if(stop == 0 )
             {
+                s  = 1;
                 System.out.println("Stop TI");
+                sp.stop(s);
+                //th1.update();
             }
             if(stop == 1)
             {
+                s  = 1;
                 System.out.println("Stop TII");
+                sp2.stop(s);
+                //th2.update();
             }
             if(stop == 2)
             {
+                s  = 1;
                 System.out.println("Stop TIII");
+                sp3.stop(s);
+                //th3.update();
             }
             if(stop == 3)
             {
+                s  = 1;
                 System.out.println("Stop TIV");
+                sp4.stop(s);
+                //th3.update();
             }
                     
         }

@@ -36,6 +36,9 @@ public class SpeedCircle
     //float xr = pos.x - 40;
     //float yr = pos.y +100;
     int arcAngle = 180;
+    //public int getAngle() {
+    //   return arcAngle;
+    //}
 
     public void render()
     {
@@ -80,10 +83,23 @@ public class SpeedCircle
             arcAngle = arcAngle + 1;
         }
 
-        for (int i=0; i< 33; i++) {
-            change = change + 5;
+        //if(arcAngle == 0)
+        //{
+        //    arcAngle = 180;
+        //}
+
+        //for (int i=0; i< 33; i++) {
+        //    change = change + 5;
+        //}
+        //ui.line(change, pos.y+10, pos.x  , pos.y+50);
+    }
+
+    public void stop( int s)
+    {
+        if(s == 1)
+        {
+            arcAngle = 180;
         }
-        ui.line(change, pos.y+10, pos.x  , pos.y+50);
     }
 
     
