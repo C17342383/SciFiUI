@@ -266,7 +266,62 @@ public class UI extends PApplet
                     
         }
 
+        //Thruster Buttons
+        int which = -1;
 
+        if ((mouseX > inborder && mouseX < inborder + buttonWidth))
+        {
+            if ((mouseY - thborder) % (buttonHeight + gap) < buttonHeight)
+            {
+                //System.out.println("Mouse X : "+ mouseX);
+                //System.out.println("Mouse Y : "+ mouseY);
+                which = (int) ((mouseY - thborder) / (buttonHeight + gap));
+                System.out.println("which : "+ which);
+            }
+        }
+
+        if (which != -1)
+        {
+            if(which == 0 && mouseX <= 1110)
+            {
+                System.out.println("Thruster 1");
+                sp.update();
+                th1.update();
+            }
+
+            if(which == 1 && mouseX <= 1110)
+            {
+                System.out.println("Thruster 3");
+            }
+            
+        }
+
+        if ((mouseX > ininborder && mouseX < ininborder + buttonWidth))
+        {
+            if ((mouseY - thborder) % (buttonHeight + gap) < buttonHeight)
+            {
+                //System.out.println("Mouse X : "+ mouseX);
+                //System.out.println("Mouse Y : "+ mouseY);
+                which = (int) ((mouseY - thborder) / (buttonHeight + gap));
+                System.out.println("which : "+ which);
+            }
+        }
+
+        if (which != -1 )
+        {
+            if(which == 0 && mouseX >=1265)
+            {
+                System.out.println("Thruster 2");
+                sp2.update();
+                th2.update();
+            }
+
+            if(which == 1 && mouseX >=1265)
+            {
+                System.out.println("Thruster 4");
+            }
+            
+        }
 
 
     }
