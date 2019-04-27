@@ -174,7 +174,6 @@ public class UI extends PApplet
     float pgap = 180;
     float pbuttonWidth = 60;
 
-    int stop = -1;
     float xborder = 1160;
     float yborder = 240 ; 
     float stopbuttonWidth = 40;
@@ -233,14 +232,38 @@ public class UI extends PApplet
         }
 
         //Thruster Stop Buttons
+        int stop = -1;
+
         if ((mouseX > xborder && mouseX < xborder + stopbuttonWidth))
         {
             if ((mouseY - yborder) % (stopbuttonHeight + stopgap) < stopbuttonHeight)
             {
-                System.out.println("Mouse X : "+ mouseX);
-                System.out.println("Mouse Y : "+ mouseY);
+                //System.out.println("Mouse X : "+ mouseX);
+                //System.out.println("Mouse Y : "+ mouseY);
                 stop = (int) ((mouseY - yborder) / (stopbuttonHeight + stopgap));
+                //System.out.println("stop : " + stop);
             }
+        }
+
+        if (stop != -1 )
+        {
+            if(stop == 0 )
+            {
+                System.out.println("Stop TI");
+            }
+            if(stop == 1)
+            {
+                System.out.println("Stop TII");
+            }
+            if(stop == 2)
+            {
+                System.out.println("Stop TIII");
+            }
+            if(stop == 3)
+            {
+                System.out.println("Stop TIV");
+            }
+                    
         }
 
 
