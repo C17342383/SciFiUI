@@ -222,6 +222,7 @@ public class UI extends PApplet
             {
                 System.out.println("Thruster 2");
                 sp2.update();
+                th2.update();
             }
 
             if(which == 1 && mouseX >=1265)
