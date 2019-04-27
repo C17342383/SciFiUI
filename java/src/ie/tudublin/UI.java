@@ -40,7 +40,6 @@ public class UI extends PApplet
     public Thruster th2;
     public Thruster th3;
     public Thruster th4;
-    SpeedCircle t ;
 
     boolean[] keys = new boolean[1024];
 
@@ -63,9 +62,9 @@ public class UI extends PApplet
     public void settings()
     {
 
-        //size(1530, 850);
+        size(1530, 850);
         // Use fullscreen instead of size to make your interface fullscreen
-        fullScreen(); 
+        //fullScreen(); 
         float height = 850;
         float width = 1530;
     }
