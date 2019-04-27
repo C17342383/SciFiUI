@@ -191,21 +191,21 @@ public class UI extends PApplet
         
         if ((mouseX > pborder && mouseX < pborder + pbuttonWidth))
         {
-                    float check1 = mouseY - pborder2;
-                    float check2 = buttonHeight + pgap;
-                    float check3 = check1 % check2;
-                    float check4 = (mouseY - (pborder2)) % (buttonHeight + pgap);
-                    System.out.println("Mouse Y - pborder : "+  check1);
-                    System.out.println("check2 : "+  check2);
-                    System.out.println("check3 : "+  check3);
-                    System.out.println("check4 : "+  check4);
-                    System.out.println(" XX Mouse X : "+ mouseX);
-                    System.out.println("XX Mouse Y : "+ mouseY);
+                    //float check1 = mouseY - pborder2;
+                    //float check2 = buttonHeight + pgap;
+                    //float check3 = check1 % check2;
+                    //float check4 = (mouseY - (pborder2)) % (buttonHeight + pgap);
+                    //System.out.println("Mouse Y - pborder : "+  check1);
+                    //System.out.println("check2 : "+  check2);
+                    //System.out.println("check3 : "+  check3);
+                    //System.out.println("check4 : "+  check4);
+                    //System.out.println(" XX Mouse X : "+ mouseX);
+                    //System.out.println("XX Mouse Y : "+ mouseY);
             if (((mouseY - pborder2) % (buttonHeight + pgap)) < buttonHeight)
             {
                 System.out.println("YY Mouse X : "+ mouseX);
                 System.out.println("YY Mouse Y : "+ mouseY);
-                 which1 = (int) ((mouseX - pborder) / (buttonHeight + gap));
+                 which1 = (int) ((mouseY - pborder2) / (buttonHeight + pgap));
                 System.out.println(" which1 : " + which1);
             }
         }
@@ -292,6 +292,8 @@ public class UI extends PApplet
             if(which == 1 && mouseX <= 1110)
             {
                 System.out.println("Thruster 3");
+                sp3.update();
+                th3.update();
             }
             
         }
@@ -319,6 +321,8 @@ public class UI extends PApplet
             if(which == 1 && mouseX >=1265)
             {
                 System.out.println("Thruster 4");
+                sp4.update();
+                th4.update();
             }
             
         }
