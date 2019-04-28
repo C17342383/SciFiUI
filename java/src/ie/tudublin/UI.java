@@ -169,6 +169,12 @@ public class UI extends PApplet
            
        }
 
+       if(ch == 1)
+       {
+           System.out.println("in if ch = 1");
+           cf.render();
+       }
+
 
         if (checkKey(LEFT))
         {
@@ -177,6 +183,7 @@ public class UI extends PApplet
     }
 
     int choose;
+    int ch = 0;
 
     float thborder = 300;
     float inborder = 960;
@@ -309,7 +316,7 @@ public class UI extends PApplet
                 System.out.println("Thruster 1");
                 sp.update();
                 th1.update();
-                th1.check();
+                ch =th1.check();
             }
 
             if(which == 1 && mouseX <= 1110)
@@ -317,7 +324,7 @@ public class UI extends PApplet
                 System.out.println("Thruster 3");
                 sp3.update();
                 th3.update();
-                th3.check();
+                ch =th3.check();
             }
             
         }
@@ -340,7 +347,7 @@ public class UI extends PApplet
                 System.out.println("Thruster 2");
                 sp2.update();
                 th2.update();
-                th2.check();
+                ch = th2.check();
             }
 
             if(which == 1 && mouseX >=1265)
@@ -348,7 +355,7 @@ public class UI extends PApplet
                 System.out.println("Thruster 4");
                 sp4.update();
                 th4.update();
-                th4.check();
+                ch = th4.check();
             }
             
         }

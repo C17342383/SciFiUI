@@ -14,6 +14,7 @@ public class Thruster
     public float downgap;
     public float downx;
     public float downy;
+    public float temp;
 
     public Thruster(UI ui, float x, float y, float width, float height, String text)
     {
@@ -27,6 +28,7 @@ public class Thruster
         downgap = ((height/2)/6)/2;
         downx = x + height -(width/4) ;
         downy =  y + (height/2);
+        temp = y + (height/2);
     }
     //float down = x + height + width/4;
 
@@ -94,14 +96,22 @@ public class Thruster
 
     }
 
-    public void check()
+    public int check()
     {
-        float ch = 1;
+        System.out.println("downy orig : "+ temp );
+        System.out.println("downy each after : "+ downy);
+        float ch = 241;
+        float ch1 = 601;
         //downy = 1;
-        //if(downy == (downgap*11))
-        if(ch == 1)
+        if((int)downy == ch || (int)downy == ch1)
+        //if(ch == 1)
         {
-            ui.cf.render();
+            System.out.println("YAY");
+            //ui.cf.render();
+            return 1;
+        }
+        else{
+            return 0;
         }
 
     }
