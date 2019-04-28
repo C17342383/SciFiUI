@@ -40,6 +40,7 @@ public class UI extends PApplet
     public Thruster th2;
     public Thruster th3;
     public Thruster th4;
+    DecayingOrbit planet;
 
     boolean[] keys = new boolean[1024];
 
@@ -109,6 +110,7 @@ public class UI extends PApplet
        thc3 = new CircleButton(this, 1160, 480, 40, 40, " TIII");
        thc4 = new CircleButton(this, 1160, 600, 40, 40, " TIV");
 
+       planet = new DecayingOrbit(this, 400, 385, 300, 300, "");
 
     
     }
@@ -176,7 +178,7 @@ public class UI extends PApplet
        }
        if(choose == 2)
        {
-           
+           planet.render();
        }
 
        if(ch == 1)

@@ -17,13 +17,13 @@ public class PlanetMap extends PApplet
     private float rotation;
     private int diameter;
 
-    /*public PlanetMap(UI ui, int x1, int y1, int diameter)
+    public PlanetMap(UI ui, int x1, int y1, int diameter)
     {
         this.ui = ui;
         this.x1 = x1;
         this.y1 = y1;
         this.diameter = diameter;
-    }*/
+    }
     public void settings()
     {
         size(800, 800);

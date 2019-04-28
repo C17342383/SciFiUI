@@ -8,10 +8,10 @@ public class Main {
 
 	}
 
-	public void planet() {
+	/*public void planet() {
 		String[] a = { "MAIN" };
 		processing.core.PApplet.runSketch(a, new PlanetMap());
-	}
+	}*/
 
 
 	public static void main(String[] args)
