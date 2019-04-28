@@ -91,5 +91,18 @@ public class Thruster
         down = down - downgap;
         //downx = downx + downgap;
         downy = downy + downgap;
+
+    }
+
+    public void check()
+    {
+        float ch = 1;
+        //downy = 1;
+        //if(downy == (downgap*11))
+        if(ch == 1)
+        {
+            ui.cf.render();
+        }
+
     }
 }

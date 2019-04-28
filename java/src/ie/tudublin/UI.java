@@ -96,7 +96,7 @@ public class UI extends PApplet
        c3 = new CircleButton(this, 840, 240, 40, 40, "CB3");
        c4 = new CircleButton(this, 840, 329, 40, 40, "CB4");
        c5 = new CircleButton(this, 840, 410, 40, 40, "CB5");
-       cf = new CriticalFuel(this, 1500/2, 800/2, 500, 150, "Critical Low Fuel", "-- CODE : 818 --");
+       cf = new CriticalFuel(this, 400, 800/2, 500, 150, "Critical Low Fuel", "-- CODE : 818 --");
        th1 = new Thruster(this, 170, 50, 100, 200, "Fuel % : ");
        th2 = new Thruster(this, 550, 50, 100, 200, "Fuel % : ");
        th3 = new Thruster(this, 170, 410, 100, 200, "Fuel % : ");
@@ -136,6 +136,7 @@ public class UI extends PApplet
         thc2.render();
         thc3.render();
         thc4.render();
+
         //c1.render();
         //c2.render();
         //c3.render();
@@ -308,6 +309,7 @@ public class UI extends PApplet
                 System.out.println("Thruster 1");
                 sp.update();
                 th1.update();
+                th1.check();
             }
 
             if(which == 1 && mouseX <= 1110)
@@ -315,6 +317,7 @@ public class UI extends PApplet
                 System.out.println("Thruster 3");
                 sp3.update();
                 th3.update();
+                th3.check();
             }
             
         }
@@ -337,6 +340,7 @@ public class UI extends PApplet
                 System.out.println("Thruster 2");
                 sp2.update();
                 th2.update();
+                th2.check();
             }
 
             if(which == 1 && mouseX >=1265)
@@ -344,6 +348,7 @@ public class UI extends PApplet
                 System.out.println("Thruster 4");
                 sp4.update();
                 th4.update();
+                th4.check();
             }
             
         }
