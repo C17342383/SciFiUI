@@ -2,7 +2,7 @@ package ie.tudublin;
 
 import processing.data.*;
 
-public class Alien
+public class Alien 
 {
     private float temp;
 
@@ -16,12 +16,10 @@ public class Alien
         return temp + "\t" ;
     }
 
-    public Alien(TableRow tabler)
-    {
-        this(tabler.getFloat("Alien"));
-    }
-
-
+    //public Alien(TableRow tabler)
+    //{
+    //    this(tabler.getFloat("Alien"));
+    //}
 
     /**
      * @return the temp
@@ -35,6 +33,16 @@ public class Alien
      */
     public void setTemp(float temp) {
         this.temp = temp;
+    }
+
+    public Alien(TableRow row)
+    {
+        temp = row.getFloat("Alien");
+    }
+
+    public Alien()
+    {
+        
     }
     
 }

@@ -102,5 +102,11 @@ public class SpeedCircle
         }
     }
 
+    public void alien( float a)
+    {
+        arcAngle =(int) a;
+    }
+
+
     
 }

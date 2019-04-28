@@ -67,10 +67,12 @@ public class UI extends PApplet
         //fullScreen(); 
         float height = 850;
         float width = 1530;
+        loadAlien();
     }
 
     public void setup()
     {
+        Alien a = new Alien();
         b = new Button(this, width /2 +50, 180, 60, 50, "Station");
         b2 = new Button(this, width/2 + 50, 410, 60, 50, "Thrusters");
         b3 = new Button(this, width/2 +50, 640 ,60, 50, "Orbit");
@@ -174,7 +176,48 @@ public class UI extends PApplet
            //System.out.println("in if ch = 1");
            cf.render();
        }
+       //int count = 0;
+       while(count ==0)
+       {
+            x =  (Math.random()*4.0);
+            rr = (int) x; 
+            System.out.println("Inserting " + rr); 
+            count = 1;
+       }
 
+       
+       if(rr == 0)
+       {
+        for (Alien a : variabletemp)
+        {
+           over =  a.getTemp();
+           sp.alien(over);
+        }
+       }
+       if(rr == 1)
+       {
+        for (Alien a : variabletemp)
+        {
+           over =  a.getTemp();
+           sp2.alien(over);
+        }
+       }
+       if(rr == 2)
+       {
+        for (Alien a : variabletemp)
+        {
+           over =  a.getTemp();
+           sp3.alien(over);
+        }
+       }
+       if(rr == 3)
+       {
+        for (Alien a : variabletemp)
+        {
+           over =  a.getTemp();
+           sp4.alien(over);
+        }
+       }
 
         if (checkKey(LEFT))
         {
@@ -184,6 +227,10 @@ public class UI extends PApplet
 
     int choose;
     int ch = 0;
+    int rr; 
+    double x;
+    int count = 0;
+    float over;
 
     float thborder = 300;
     float inborder = 960;
@@ -206,7 +253,6 @@ public class UI extends PApplet
     public void mouseClicked()
     {
         //System.out.println("in load Aline");
-        loadAlien();
         //printAlien();
         
         //Panel buttons
