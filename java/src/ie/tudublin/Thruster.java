@@ -10,13 +10,17 @@ public class Thruster
     private float width;
     private float height;
     private String text;
+    private String text2;
+    private String text3;
+    private String text4;
     public float down;
     public float downgap;
     public float downx;
     public float downy;
     public float temp;
+    public float fuel;
 
-    public Thruster(UI ui, float x, float y, float width, float height, String text)
+    public Thruster(UI ui, float x, float y, float width, float height, String text, String text2, String text3, String text4)
     {
         this.ui = ui;
         this.x = x;
@@ -24,11 +28,15 @@ public class Thruster
         this.width = width;
         this.height = height;
         this.text = text;
+        this.text2 = text2;
+        this.text3 = text3;
+        this.text4 = text4;
         down = height /2;
         downgap = ((height/2)/6)/2;
         downx = x + height -(width/4) ;
         downy =  y + (height/2);
         temp = y + (height/2);
+        fuel = 100;
     }
     //float down = x + height + width/4;
 
@@ -51,6 +59,9 @@ public class Thruster
         
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text(text, x + width * 1.4f, y + height * 1.07f);
+        ui.text(text2, x + 60, y+height + 37 * 1.07f);
+        ui.text(text3, x + 60 , y + height + 64* 1.07f);
+        ui.text(text4, x + 60  , y + height + 92 * 1.07f);
 
         ui.line(x + width + halfW + distin*2 , y+height,x + width + halfW + distin*2, y + halfH );
         //ui.line( y + halfH - distin, x + width + halfW + distin*2, y + halfH, x + width + halfW + distin*2);
@@ -84,6 +95,7 @@ public class Thruster
         ui.pushMatrix();
         //float down = x+ height - distin;
         ui.rect(downx , downy,distin, down);
+        ui.text(fuel, x + width + width/2 + distin * 1.4f, y + height * 1.07f);
         ui.popMatrix();
     }
     
@@ -93,6 +105,7 @@ public class Thruster
         down = down - downgap;
         //downx = downx + downgap;
         downy = downy + downgap;
+        fuel = fuel - downgap;
 
     }
 

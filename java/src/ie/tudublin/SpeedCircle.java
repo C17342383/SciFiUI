@@ -104,7 +104,13 @@ public class SpeedCircle
 
     public void alien( float a)
     {
-        arcAngle =(int) a;
+        int count = 0;
+        while(count != 300)
+        {
+            arcAngle =(int) a;
+            count = count +1;
+        }
+        arcAngle =180;
     }
 
 

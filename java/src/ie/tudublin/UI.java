@@ -99,10 +99,10 @@ public class UI extends PApplet
        c4 = new CircleButton(this, 840, 329, 40, 40, "CB4");
        c5 = new CircleButton(this, 840, 410, 40, 40, "CB5");
        cf = new CriticalFuel(this, 400, 800/2, 500, 150, "Critical Low Fuel", "-- CODE : 818 --");
-       th1 = new Thruster(this, 170, 50, 100, 200, "Fuel % : ");
-       th2 = new Thruster(this, 550, 50, 100, 200, "Fuel % : ");
-       th3 = new Thruster(this, 170, 410, 100, 200, "Fuel % : ");
-       th4 = new Thruster(this, 550, 410, 100, 200, "Fuel % : ");
+       th1 = new Thruster(this, 170, 50, 100, 200, "Fuel % : ", "STATUS     :     OPERATIONAL", "FAULTS     :     NONE", "SENSORS     :     OPERATIONAL");
+       th2 = new Thruster(this, 550, 50, 100, 200, "Fuel % : ", "STATUS     :     OPERATIONAL", "FAULTS     :     NONE", "SENSORS     :     OPERATIONAL");
+       th3 = new Thruster(this, 170, 410, 100, 200, "Fuel % : ", "STATUS     :     OPERATIONAL", "FAULTS     :     NONE", "SENSORS     :     OPERATIONAL");
+       th4 = new Thruster(this, 550, 410, 100, 200, "Fuel % : ", "STATUS     :     OPERATIONAL", "FAULTS     :     NONE", "SENSORS     :     OPERATIONAL");
 
        thc1 = new CircleButton(this, 1160, 240, 40, 40, " TI");
        thc2 = new CircleButton(this, 1160, 360, 40, 40, " TII");
@@ -113,8 +113,16 @@ public class UI extends PApplet
     
     }
 
+    public float health1;
+
+    public float timeDelta;
+    private float last;
+
     public void draw()
     {
+        float now = millis();
+        timeDelta = (now - last) / 1000.0f;
+        last = now;
 
         background(0);
         //Panel Design
@@ -183,41 +191,7 @@ public class UI extends PApplet
             rr = (int) x; 
             System.out.println("Inserting " + rr); 
             count = 1;
-       }
-
-       
-       if(rr == 0)
-       {
-        for (Alien a : variabletemp)
-        {
-           over =  a.getTemp();
-           sp.alien(over);
-        }
-       }
-       if(rr == 1)
-       {
-        for (Alien a : variabletemp)
-        {
-           over =  a.getTemp();
-           sp2.alien(over);
-        }
-       }
-       if(rr == 2)
-       {
-        for (Alien a : variabletemp)
-        {
-           over =  a.getTemp();
-           sp3.alien(over);
-        }
-       }
-       if(rr == 3)
-       {
-        for (Alien a : variabletemp)
-        {
-           over =  a.getTemp();
-           sp4.alien(over);
-        }
-       }
+       } 
 
         if (checkKey(LEFT))
         {
