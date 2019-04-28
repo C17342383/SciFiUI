@@ -26,11 +26,11 @@ public class Radar extends PApplet
         this.diameter = diameter;
         radius = (diameter / 2) - 30;
         pos = new PVector(x, y);
-        xr = x - radius - 40;
+        xr = x - radius - 30;
         yr = y - radius-540;
 
-    System.out.println( "Xr" + xr);
-    System.out.println( "Yr" + yr);
+    //System.out.println( "Xr" + xr);
+    //System.out.println( "Yr" + yr);
 
     }
     

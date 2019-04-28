@@ -94,11 +94,11 @@ public class UI extends PApplet
        t4 = new TankVolume(this, 700, 550, 50, 200, "Tank 4");
        t5 = new TankVolume(this, 800, 550, 50, 200, "Tank 5");
 
-       c1 = new CircleButton(this, 840, 79, 40, 40, "CB1");
-       c2 = new CircleButton(this, 840, 159, 40, 40, "CB2");
-       c3 = new CircleButton(this, 840, 240, 40, 40, "CB3");
-       c4 = new CircleButton(this, 840, 329, 40, 40, "CB4");
-       c5 = new CircleButton(this, 840, 410, 40, 40, "CB5");
+       c1 = new CircleButton(this, 100, 770, 40, 40, "CB1");
+       c2 = new CircleButton(this, 250, 770, 40, 40, "CB2");
+       c3 = new CircleButton(this, 400, 770, 40, 40, "CB3");
+       c4 = new CircleButton(this, 550, 770, 40, 40, "CB4");
+       c5 = new CircleButton(this, 700, 770, 40, 40, "CB5");
        cf = new CriticalFuel(this, 400, 800/2, 500, 150, "Critical Low Fuel", "-- CODE : 818 --");
        th1 = new Thruster(this, 170, 50, 100, 200, "Fuel % : ", "STATUS     :     OPERATIONAL", "FAULTS     :     NONE", "SENSORS     :     OPERATIONAL");
        th2 = new Thruster(this, 550, 50, 100, 200, "Fuel % : ", "STATUS     :     OPERATIONAL", "FAULTS     :     NONE", "SENSORS     :     OPERATIONAL");
@@ -149,11 +149,11 @@ public class UI extends PApplet
         thc3.render();
         thc4.render();
 
-        //c1.render();
-        //c2.render();
-        //c3.render();
-        //c4.render();
-        //c5.render();
+        c1.render();
+        c2.render();
+        c3.render();
+        c4.render();
+        c5.render();
         //t1.render();
         //t2.render();
         //t3.render();
