@@ -102,17 +102,31 @@ public class Thruster
         System.out.println("downy each after : "+ downy);
         float ch = 241;
         float ch1 = 601;
-        //downy = 1;
+        float ch2 = 249;
+        float ch3 = 609;
+        if((int)downy >= ch2 && downy <509 )
+        {
+            downy = 0;
+            downgap = 0;
+
+        }
+        if((int)downy >= ch3 )
+        {
+            downy = 0;
+            downgap = 0;
+
+        }
         if((int)downy == ch || (int)downy == ch1)
         //if(ch == 1)
         {
-            System.out.println("YAY");
+            //System.out.println("YAY");
             //ui.cf.render();
             return 1;
         }
         else{
             return 0;
         }
+
 
     }
 }

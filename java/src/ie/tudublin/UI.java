@@ -171,7 +171,7 @@ public class UI extends PApplet
 
        if(ch == 1)
        {
-           System.out.println("in if ch = 1");
+           //System.out.println("in if ch = 1");
            cf.render();
        }
 
