@@ -1,17 +1,22 @@
 package ie.tudublin;
 
+import processing.core.PApplet;
 
 public class PanelDesign
 {
     UI ui;
     private int width;
     private int height;
+    private String Text;
+    private String text2;
 
-    public PanelDesign(UI ui, int width, int height)
+    public PanelDesign(UI ui, int width, int height, String Text, String text2)
     {
         this.ui = ui;
         this.width = width;
         this.height = height;
+        this.Text = Text;
+        this.text2 = text2;
     }
 
 	public void render()
@@ -56,5 +61,10 @@ public class PanelDesign
        ui.ellipse(width - 13, 13, 10, 10);
        ui.ellipse(width - 13, height -13, 10, 10);
        ui.ellipse(13, height -13, 10, 10);
+
+       ui.rect(1045, 730, 300, 50);
+       ui.textAlign(PApplet.CENTER, PApplet.CENTER);
+       ui.text(Text, 1200 , 745);
+       ui.text(text2, 1200 , 765);
     }
 }

@@ -83,7 +83,7 @@ public class UI extends PApplet
         buttonE4 = new Button(this, 1265, 650, 150, 50, "Launch Thruster IV");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
         r = new Radar(this, 200, 600, 200);
-        p = new PanelDesign(this, 1530, 850);
+        p = new PanelDesign(this, 1530, 850, "International Space Station", "Mars Pilgrim Mission");
        sp = new SpeedCircle(this, width - 500, height - 700, 200, 200, "Thruster I");
        sp2 = new SpeedCircle(this, width - 200, height - 700, 200, 200, "Thruster II");
        sp3 = new SpeedCircle(this, width - 500, height - 350, 200, 200, "Thruster III");
