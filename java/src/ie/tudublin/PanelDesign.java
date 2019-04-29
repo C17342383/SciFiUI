@@ -23,13 +23,15 @@ public class PanelDesign
     {
         float halfW = width /2;
         float halfH = height /2;
-        ui.noFill();
+        ui.fill(64, 64, 64);
         ui.stroke(255);
         //ui.fill(29, 28, 40);
         ui.rect(20, 20 , width -40, height - 40 );
         //ui.noFill();
+        ui.fill(0, 153, 153);
         ui.rect(30, 30, halfW , halfH +halfH/2 + halfH/6);
 
+        ui.fill(51, 51, 51);
         int numLines = 10;
         float gap = halfW / numLines;
         float x =30;
@@ -56,13 +58,17 @@ public class PanelDesign
        ui.ellipse(halfW + gap + gap/2 + 590 - 13, 53, 10, 10);
     
 
-
+       ui.fill(64, 64, 64);
        ui.ellipse(13, 13, 10, 10);
        ui.ellipse(width - 13, 13, 10, 10);
        ui.ellipse(width - 13, height -13, 10, 10);
        ui.ellipse(13, height -13, 10, 10);
 
+       ui.fill(154, 154, 154);
+       ui.stroke(0, 0, 0);
+       ui.color(0, 0, 0);
        ui.rect(1045, 730, 300, 50);
+       ui.fill(0);
        ui.textAlign(PApplet.CENTER, PApplet.CENTER);
        ui.text(Text, 1200 , 745);
        ui.text(text2, 1200 , 765);
