@@ -32,18 +32,35 @@ public class DecayingOrbit
     {  
         float gap = width /2;
         float gap2 = width/4;
-        ui.noFill();
-        ui.stroke(255);
-        ui.ellipse(pos.x, pos.y, width, height ); 
-        ui.ellipse(pos.x, pos.y, width + gap, height + height/2);
-        ui.ellipse(pos.x, pos.y, width *2 - gap2, height*2 - gap2);
+        ui.fill(15, 31, 61);
+        //Outer
         ui.ellipse(pos.x, pos.y, width *2 +gap2, height*2 + gap2);
 
         //Ship line
+        ui.fill(20, 42, 82);
         ui.ellipse(pos.x, pos.y, width*2, height*2);
         ui.translate(pos.x, pos.y);
         ui.rotate(rotation);
+        ui.fill(0);
         ui.ellipse(x + width , y , 20, 20);
+
+
+        ui.fill(25, 52, 103);
+        ui.ellipse(x, y, width *2 - gap2, height*2 - gap2);
+
+        ui.fill(35, 73, 144);
+        ui.ellipse(x, y, width + gap, height + height/2);
+
+        //Earth ?
+        ui.fill(0, 128, 43);
+        ui.stroke(0);
+        ui.ellipse(x, y, width, height ); 
+
+
+
+
+
+
     }
 
     public void update()
