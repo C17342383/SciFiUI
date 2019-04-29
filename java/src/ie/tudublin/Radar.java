@@ -37,7 +37,7 @@ public class Radar extends PApplet
     public void render()
     {
         ui.stroke(255);
-        ui.noFill();
+        ui.fill(0);
         ui.ellipse(pos.x, pos.y, diameter, diameter);//radius *2 for last two arg
         ui.fill(255);
         // Static field

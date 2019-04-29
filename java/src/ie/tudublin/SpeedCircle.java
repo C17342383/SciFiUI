@@ -43,6 +43,7 @@ public class SpeedCircle
     public void render()
     {
         ui.fill(21, 21, 21);
+        ui.stroke(0);
         ui.rect(pos.x - 105, pos.y - 105, width + 10, height + 10);
         ui.fill(38, 38, 38);
         ui.stroke(255);
