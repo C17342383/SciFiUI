@@ -41,6 +41,7 @@ public class UI extends PApplet
     public Thruster th3;
     public Thruster th4;
     DecayingOrbit planet;
+    CriticalFuel dcw;
 
     boolean[] keys = new boolean[1024];
 
@@ -99,18 +100,17 @@ public class UI extends PApplet
        c3 = new CircleButton(this, 400, 770, 40, 40, "CB3");
        c4 = new CircleButton(this, 550, 770, 40, 40, "CB4");
        c5 = new CircleButton(this, 700, 770, 40, 40, "CB5");
-       cf = new CriticalFuel(this, 400, 800/2, 500, 150, "Critical Low Fuel", "-- CODE : 818 --");
+       cf = new CriticalFuel(this, 400, 400, 500, 150, "Critical Low Fuel", "-- CODE : 818 --");
        th1 = new Thruster(this, 170, 50, 100, 200, "Fuel % : ", "STATUS     :     OPERATIONAL", "FAULTS     :     NONE", "SENSORS     :     OPERATIONAL");
        th2 = new Thruster(this, 550, 50, 100, 200, "Fuel % : ", "STATUS     :     OPERATIONAL", "FAULTS     :     NONE", "SENSORS     :     OPERATIONAL");
        th3 = new Thruster(this, 170, 410, 100, 200, "Fuel % : ", "STATUS     :     OPERATIONAL", "FAULTS     :     NONE", "SENSORS     :     OPERATIONAL");
        th4 = new Thruster(this, 550, 410, 100, 200, "Fuel % : ", "STATUS     :     OPERATIONAL", "FAULTS     :     NONE", "SENSORS     :     OPERATIONAL");
-
        thc1 = new CircleButton(this, 1160, 240, 40, 40, " TI");
        thc2 = new CircleButton(this, 1160, 360, 40, 40, " TII");
        thc3 = new CircleButton(this, 1160, 480, 40, 40, " TIII");
        thc4 = new CircleButton(this, 1160, 600, 40, 40, " TIV");
-
        planet = new DecayingOrbit(this, 400, 385, 300, 300, "");
+       dcw = new CriticalFuel(this, 400, 400, 500, 150, "Warning Decaying Orbit", "-- CODE : 211 --");
 
     
     }
@@ -187,6 +187,12 @@ public class UI extends PApplet
            //System.out.println("in if ch = 1");
            cf.render();
        }
+
+       if(de == 1)
+       {
+           //System.out.println("in if ch = 1");
+           dcw.render();
+       }
        //int count = 0;
        while(count ==0)
        {
@@ -208,6 +214,7 @@ public class UI extends PApplet
     double x;
     int count = 0;
     float over;
+    int de = 0;
 
     float thborder = 300;
     float inborder = 960;
@@ -340,6 +347,7 @@ public class UI extends PApplet
                 sp.update();
                 th1.update();
                 ch =th1.check();
+                de = planet.decay();
             }
 
             if(which == 1 && mouseX <= 1110)
@@ -348,6 +356,7 @@ public class UI extends PApplet
                 sp3.update();
                 th3.update();
                 ch =th3.check();
+                de = planet.decay();
             }
             
         }
@@ -371,6 +380,7 @@ public class UI extends PApplet
                 sp2.update();
                 th2.update();
                 ch = th2.check();
+                de = planet.decay();
             }
 
             if(which == 1 && mouseX >=1265)
@@ -379,6 +389,7 @@ public class UI extends PApplet
                 sp4.update();
                 th4.update();
                 ch = th4.check();
+                de = planet.decay();
             }
             
         }

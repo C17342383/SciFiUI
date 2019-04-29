@@ -1,8 +1,6 @@
 package ie.tudublin;
 
 import processing.core.PVector;
-import processing.core.*;
-import processing.*;
 
 public class DecayingOrbit
 {
@@ -14,6 +12,7 @@ public class DecayingOrbit
     private String text;
     private PVector pos;
     private float rotation;
+    private float decay;
  
 
     public DecayingOrbit(UI ui, float x, float y, float width, float height, String text)
@@ -25,6 +24,7 @@ public class DecayingOrbit
         this.height = height;
         this.text = text;
         pos = new PVector(x, y);
+        decay = x - 100;
     }
 
 
@@ -39,22 +39,24 @@ public class DecayingOrbit
         //Ship line
         ui.fill(20, 42, 82);
         ui.ellipse(pos.x, pos.y, width*2, height*2);
+        ui.pushMatrix();
         ui.translate(pos.x, pos.y);
         ui.rotate(rotation);
         ui.fill(0);
-        ui.ellipse(x + width , y , 20, 20);
+        ui.ellipse(decay , y , 20, 20);
+        ui.popMatrix();
 
 
         ui.fill(25, 52, 103);
-        ui.ellipse(x, y, width *2 - gap2, height*2 - gap2);
+        ui.ellipse(pos.x, pos.y, width *2 - gap2, height*2 - gap2);
 
         ui.fill(35, 73, 144);
-        ui.ellipse(x, y, width + gap, height + height/2);
+        ui.ellipse(pos.x, pos.y, width + gap, height + height/2);
 
         //Earth ?
         ui.fill(0, 128, 43);
         ui.stroke(0);
-        ui.ellipse(x, y, width, height ); 
+        ui.ellipse(pos.x, pos.y, width, height ); 
 
 
 
@@ -68,5 +70,19 @@ public class DecayingOrbit
         this.x=(int) Math.sin(rotation);
         this.y = (int) -(float) Math.cos(rotation);
         rotation += 0.001f;
+
+    }
+
+    public int decay()
+    {
+        decay = decay -1;
+
+        if(decay <= x - 110)
+        {
+            return 1;
+        }
+        else{
+            return 0;
+        }
     }
 }
