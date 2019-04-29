@@ -42,11 +42,15 @@ public class SpeedCircle
 
     public void render()
     {
-        ui.noFill();
+        ui.fill(21, 21, 21);
+        ui.rect(pos.x - 105, pos.y - 105, width + 10, height + 10);
+        ui.fill(38, 38, 38);
         ui.stroke(255);
         ui.ellipse(pos.x, pos.y, width, height );
+        ui.fill(0);
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text(text, pos.x +5 , pos.y + height -130);
+        ui.noFill();
         ui.line(pos.x - 86 , pos.y + 50 , pos.x + 86, pos.y +50);
         ui.pushMatrix();
         change = pos.x-80;
@@ -58,7 +62,6 @@ public class SpeedCircle
         ui.popMatrix();
 
 
-        ui.rect(pos.x - 105, pos.y - 105, width + 10, height + 10);
         int startAngle = 0;
     
         //ui.arc(pos.x + 100, pos.y+100, 50, 50, startAngle, ui.PI/2);

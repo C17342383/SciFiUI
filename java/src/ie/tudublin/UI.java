@@ -126,7 +126,7 @@ public class UI extends PApplet
         timeDelta = (now - last) / 1000.0f;
         last = now;
 
-        background(51, 51, 51);
+        background(10, 10, 10);
         //Panel Design
         p.render();
         //Panel Buttons

@@ -23,12 +23,12 @@ public class PanelDesign
     {
         float halfW = width /2;
         float halfH = height /2;
-        ui.fill(64, 64, 64);
+        ui.fill(19,19, 19);
         ui.stroke(255);
         //ui.fill(29, 28, 40);
         ui.rect(20, 20 , width -40, height - 40 );
         //ui.noFill();
-        ui.fill(0, 153, 153);
+        ui.fill(10, 34, 51);
         ui.rect(30, 30, halfW , halfH +halfH/2 + halfH/6);
 
         ui.fill(51, 51, 51);
@@ -51,6 +51,7 @@ public class PanelDesign
         }
 
        // ui.rect(600, 600, width -25, height -25);
+       ui.fill(25, 25, 25);
        ui.rect(halfW + gap + gap/2, 40, 590, height - 80);
        ui.ellipse(halfW + gap + gap/2 + 13, 53, 10, 10);
        ui.ellipse(halfW + gap + gap/2 + 13, height -53, 10, 10);
@@ -66,7 +67,6 @@ public class PanelDesign
 
        ui.fill(154, 154, 154);
        ui.stroke(0, 0, 0);
-       ui.color(0, 0, 0);
        ui.rect(1045, 730, 300, 50);
        ui.fill(0);
        ui.textAlign(PApplet.CENTER, PApplet.CENTER);

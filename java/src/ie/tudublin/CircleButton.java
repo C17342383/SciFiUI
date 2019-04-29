@@ -23,9 +23,10 @@ public class CircleButton
 
     public void render()
     {
-        ui.noFill();
-        ui.stroke(255);
+        ui.fill(128, 0, 0);
+        ui.stroke(0);
         ui.rect(x, y, width, height);
+        ui.fill(0, 0, 0);
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text(text, x + width * 0.5f, y + height * 0.5f);
     }
