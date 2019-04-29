@@ -179,6 +179,7 @@ public class UI extends PApplet
        if(choose == 2)
        {
            planet.render();
+           planet.update();
        }
 
        if(ch == 1)

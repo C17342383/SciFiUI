@@ -27,7 +27,9 @@ public class CriticalFuel
     {
         ui.noFill();
         ui.stroke(255, 69, 0);
+        ui.fill(22, 22, 22);
         ui.rect(x - (width/2), y -(height/2), width, height);
+        ui.fill(255, 69, 0);
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text(text , x + width * 0.02f, y - height * 0.1f);
         ui.text(text2 , x + width * 0.02f, y + height * 0.2f);
