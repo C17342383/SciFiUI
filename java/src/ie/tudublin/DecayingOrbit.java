@@ -53,16 +53,10 @@ public class DecayingOrbit
         ui.fill(35, 73, 144);
         ui.ellipse(pos.x, pos.y, width + gap, height + height/2);
 
-        //Earth ?
+        //Earth 
         ui.fill(0, 128, 43);
         ui.stroke(0);
         ui.ellipse(pos.x, pos.y, width, height ); 
-
-
-
-
-
-
     }
 
     public void update()

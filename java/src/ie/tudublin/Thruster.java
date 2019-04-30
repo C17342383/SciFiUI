@@ -112,16 +112,14 @@ public class Thruster
     public void update()
     {
         down = down - downgap;
-        //downx = downx + downgap;
         downy = downy + downgap;
         fuel = fuel - downgap;
-
     }
 
     public int check()
     {
-        System.out.println("downy orig : "+ temp );
-        System.out.println("downy each after : "+ downy);
+        //System.out.println("downy orig : "+ temp );
+        //System.out.println("downy each after : "+ downy);
         float ch = 241;
         float ch1 = 601;
         float ch2 = 249;
@@ -142,13 +140,10 @@ public class Thruster
         //if(ch == 1)
         {
             //System.out.println("YAY");
-            //ui.cf.render();
             return 1;
         }
         else{
             return 0;
         }
-
-
     }
 }
