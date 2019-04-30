@@ -1,18 +1,34 @@
 # SciFi UI Project
 
-Name:
+Name: Aoife Tooomey
 
-Student Number: 
-
-Fork this repository and use it a starter project for your assignment
+Student Number: C17342383
 
 # Description of the assignment
+The main idea of the assignment was a spaceship interface that controls the thrusters of the ship. 
+The dial panels and buttons control thr measure of the tempature of the thrusters which shows whether they
+are currently in use or not.
+The main buttons switch between screens which give some information either about the station, thruster, or ship orbiting the earth.
+Some of the buttons are there only for aesthetic purposes.
+I had wanted to add an alien that seemingly when it climbed into the thrusters to try get aboard the ship would raise the tempature slightly
+signaling to the crew where it was ans they try to blast it out - this was based on the SciFi movie 'Life', - however i found this quite 
+difficult to implement. I did leave the code there and some is commented out as it effects the implementation of the rest of the code.
+There are some files that I created but in the end decided not to use, in relation to the Planets.java and the PlanetsMap, at the start i had decided to do a project featuring the planets and calculate their actual distance fom each other and speed around the sun and if you clicked on them information would display but a fellow classmate was doing something similar to I decided to choose another idea.
 
 # Instructions
+The interface open on the station panel screen and the Thruster dial panels (the thruster dial panels are are stationary and always present physically, whereas the screen is supposed to represent a screen and changes).
+There are 3 buttons to the right side of the screen, Station, Thrusters and Orbit - when you click on these buttons you switch back and forth between the screen displaying certain information about each.
+The thruster dial panels : under each dial is a 'Launch' button when you press this the dial goes up to signal an increase in heat, in the middle of the four dial there are four buttons these are to turn off the Thrusters. The thruster are labelled I, II, III, and IV aswell as the buttons so 
+you know which is relating to which.
+If you are on the Thruster screen while pressing the Launch buttons then you will see the fuel of each thruster dercrease. 
+When the Thruster fuel level get low a warning will come up.
+If you are on the Orbit page when you press the launch buttons you will see the black circle representing the ship moving towards the large green circle - by launching the thrusters you are causing the ship to decay back into earths orbit, when you are getting too close a warning will appear.
 
 # How it works
 
+
 # What I am most proud of in the assignment
+I think what i'm most proud of is the thruster connectivity. I felt a sense of accomplishment when I saw the fuel decrease as you pressed the button. The dial angle was very difficult to implement, aswell as the whole dial itself. It was like a rotation of a whole circle but you want a start and stop point.
 
 # Markdown Tutorial
 
