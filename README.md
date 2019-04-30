@@ -172,6 +172,6 @@ This is the youtube video for my project:
 
 
 Example of way to imbed youtube video
-[![YouTube](YouTubePic.jpg)](https://youtu.be/MiFeavigzzA)
+[![YouTube](YouTubePic.png)](https://youtu.be/MiFeavigzzA)
 
 
