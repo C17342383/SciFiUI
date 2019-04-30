@@ -193,7 +193,9 @@ public class UI extends PApplet
            //System.out.println("in if ch = 1");
            dcw.render();
        }
-       //int count = 0;
+
+       /*
+       int count = 0;
        while(count ==0)
        {
             x =  (Math.random()*4.0);
@@ -201,6 +203,44 @@ public class UI extends PApplet
             System.out.println("Inserting " + rr); 
             count = 1;
        } 
+
+              //while(health1 >= 20.0 || health1 <=200.0);
+       //{
+           //System.out.println("Endless while?");
+           if(rr == 0)
+           {
+               for (Alien a : variabletemp)
+               {
+                   over =  a.getTemp();
+                   sp.alien(over);
+               }
+           }
+           if(rr == 1)
+           {
+               for (Alien a : variabletemp)
+               {
+                   over =  a.getTemp();
+                   sp2.alien(over);
+               }
+           }
+           if(rr == 2)
+           {
+               for (Alien a : variabletemp)
+               {
+                   over =  a.getTemp();
+                   sp3.alien(over);
+               }
+           }
+           if(rr == 3)
+           {
+               for (Alien a : variabletemp)
+               {
+                   over =  a.getTemp();
+                   sp4.alien(over);
+               }
+           }
+       health1 += timeDelta;  
+   } */
 
         if (checkKey(LEFT))
         {

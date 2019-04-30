@@ -64,8 +64,6 @@ This is code sample for the panel buttons:
 ```Java
     public int check()
     {
-        //System.out.println("downy orig : "+ temp );
-        //System.out.println("downy each after : "+ downy);
         float ch = 241;
         float ch1 = 601;
         float ch2 = 249;
@@ -83,13 +81,36 @@ This is code sample for the panel buttons:
 
         }
         if((int)downy == ch || (int)downy == ch1)
-        //if(ch == 1)
         {
             //System.out.println("YAY");
             return 1;
         }
         else{
             return 0;
+        }
+    }
+```
+
+The SpeedCircle has render(), update(), stop() and alien(). The render method draws the dials and the look of the gauge. The update() updates the angle of the dial when the 'Launch' button is pressed. The stop() reverts the dial to its original position when the stop buttons are pressed and the alien() is supposed to change the dial to represent the alien climbing into the thruster but the code calling it is commented out in UI.java
+```Java
+    public void update()
+    {
+        this.x=(int) Math.sin(rotation);
+        this.y = (int) -(float) Math.cos(rotation);
+        rotation += 0.000000000000001f;
+
+        while(arcAngle != 0)
+        {
+            arcAngle = arcAngle + 1;
+        }
+    }
+```
+```Java
+    public void stop( int s)
+    {
+        if(s == 1)
+        {
+            arcAngle = 180;
         }
     }
 ```
@@ -139,6 +160,13 @@ This is code sample for the panel buttons:
 
 # What I am most proud of in the assignment
 I think what i'm most proud of is the thruster connectivity. I felt a sense of accomplishment when I saw the fuel decrease as you pressed the button. The dial angle was very difficult to implement, aswell as the whole dial itself. It was like a rotation of a whole circle but you want a start and stop point.
+
+# YouTube Video Link
+This is the youtube video for my project:
+
+
+Example of way to imbed youtube video
+[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
 
 # Markdown Tutorial
 
