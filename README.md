@@ -90,6 +90,8 @@ This is code sample for the panel buttons:
         }
     }
 ```
+![An image](images/Thruster1.png)
+![An image](images/DecreaseFuel.png)
 
 The SpeedCircle has render(), update(), stop() and alien(). The render method draws the dials and the look of the gauge. The update() updates the angle of the dial when the 'Launch' button is pressed. The stop() reverts the dial to its original position when the stop buttons are pressed and the alien() is supposed to change the dial to represent the alien climbing into the thruster but the code calling it is commented out in UI.java
 ```Java
@@ -141,6 +143,8 @@ The SpeedCircle has render(), update(), stop() and alien(). The render method dr
         }
     }
 ```
+![An image](images/Orbit.png)
+![An image](images/DecayOrbit.png)
 
 4. Warnings - The warnings are quite simple, the values are passed in and then the render() implements the drawing of the shape and prints the text.
 ```Java
@@ -156,7 +160,8 @@ The SpeedCircle has render(), update(), stop() and alien(). The render method dr
         ui.text(text2 , x + width * 0.02f, y + height * 0.2f);
 	}
 ```
-
+![An image](images/LowFuel.png)
+![An image](images/DecayWarning.png)
 
 # What I am most proud of in the assignment
 I think what i'm most proud of is the thruster connectivity. I felt a sense of accomplishment when I saw the fuel decrease as you pressed the button. The dial angle was very difficult to implement, aswell as the whole dial itself. It was like a rotation of a whole circle but you want a start and stop point.
@@ -218,12 +223,8 @@ public void render()
 This is an image using a relative URL:
 
 ![An image](images/p8.png)
-![An image](images/Thruster1.png)
 ![An image](images/DecayOrbit.png)
 ![An image](images/DecayWarning.png)
-![An image](images/DecreaseFuel.png)
-![An image](images/LowFuel.png)
-![An image](images/Orbit.png)
 
 This is an image using an absolute URL:
 
