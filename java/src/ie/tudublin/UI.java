@@ -1,6 +1,8 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
+import processing.core.PImage;
+
 import java.util.ArrayList;
 import processing.data.Table;
 import processing.data.TableRow;
@@ -42,6 +44,7 @@ public class UI extends PApplet
     public Thruster th4;
     DecayingOrbit planet;
     CriticalFuel dcw;
+    PImage img;
 
     boolean[] keys = new boolean[1024];
 
@@ -74,6 +77,7 @@ public class UI extends PApplet
 
     public void setup()
     {
+        img = loadImage("SpaceShip5.png");
         Alien a = new Alien();
         b = new Button(this, width /2 +50, 180, 60, 50, "Station");
         b2 = new Button(this, width/2 + 50, 410, 60, 50, "Thrusters");
@@ -165,6 +169,7 @@ public class UI extends PApplet
 
        if(choose == 0)
        {
+            image(img,80,100);
             r.render();
             r.update();
 

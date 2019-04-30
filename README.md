@@ -223,8 +223,6 @@ public void render()
 This is an image using a relative URL:
 
 ![An image](images/p8.png)
-![An image](images/DecayOrbit.png)
-![An image](images/DecayWarning.png)
 
 This is an image using an absolute URL:
 

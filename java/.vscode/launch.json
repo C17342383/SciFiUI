@@ -2,11 +2,17 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ShowPicture",
+            "request": "launch",
+            "mainClass": "ie.tudublin.ShowPicture",
+            "projectName": "java"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Main",
             "request": "launch",
             "mainClass": "ie.tudublin.Main",
-            "projectName": "java",
-            //"console": "externalTerminal"
+            "projectName": "java"
         }
     ]
 }
