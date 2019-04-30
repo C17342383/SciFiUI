@@ -33,12 +33,8 @@ public class SpeedCircle
     }
     float move = x-80;
     float radius = 100;
-    //float xr = pos.x - 40;
-    //float yr = pos.y +100;
     int arcAngle = 180;
-    //public int getAngle() {
-    //   return arcAngle;
-    //}
+
 
     public void render()
     {
@@ -55,13 +51,11 @@ public class SpeedCircle
         ui.line(pos.x - 86 , pos.y + 50 , pos.x + 86, pos.y +50);
         ui.pushMatrix();
         change = pos.x-80;
-        //ui.line(change, pos.y+10, pos.x  , pos.y+50);
         ui.translate(pos.x, pos.y);
         //ui.rotate(rotation);
         ui.rotate(arcAngle);
         ui.line(0 , 0 ,50, -50);
         ui.popMatrix();
-
 
         int startAngle = 0;
     

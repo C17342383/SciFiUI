@@ -38,11 +38,9 @@ public class Thruster
         temp = y + (height/2);
         fuel = 100;
     }
-    //float down = x + height + width/4;
 
     public void render()
     {
-        //System.out.println("Down : " + down);
         float halfW = width/2;
         float halfH = height/2;
         float smallbox = 20;
@@ -61,9 +59,6 @@ public class Thruster
         ui.line(x + halfW +smallbox/2 + halfW + distin , y+height, x + distin*3, y + halfH);
 
         ui.line(x + width + halfW + distin*2 , y+height,x + width + halfW + distin*2, y + halfH );
-        //ui.line( y + halfH - distin, x + width + halfW + distin*2, y + halfH, x + width + halfW + distin*2);
-        //ui.line(y,x + halfH, y -distin, x + halfH);
-        //ui.line(  x + width + halfW + distin*2,y + halfH , x+ height - distin, y + halfH); //y - halfH - distin, x + height + distin );
 
         ui.fill(32, 32,32);
         ui.rect(x - distin*2, y+height + 30, height + distin, 20);
@@ -79,7 +74,6 @@ public class Thruster
 
         ui.stroke(0);
         ui.pushMatrix();
-        //float down = x+ height - distin;
         ui.rect(downx , downy,distin, down);
         ui.text(fuel, x + width + width/2 + distin * 1.4f, y + height * 1.07f);
         ui.popMatrix();
@@ -91,7 +85,6 @@ public class Thruster
         float x1 =y + halfH ;
 		for(int l = 0 ; l <= numLines; l ++)
 		{
-            //ui.line(x + height, x1, y + 180, x1);
             ui.stroke(0);
             ui.line(  x + width + halfW + distin*2,x1 , x+ height - distin, x1);
             x1 = x1+gap;
@@ -101,7 +94,6 @@ public class Thruster
         x1 =y + halfH + gap;
         for(int l = 0 ; l < numLines *2; l ++)
 		{
-            //ui.line(x + height, x1, y + 180, x1);
             ui.stroke(0);
             ui.line(x+height - distin /2, x1,  x+height   , x1);
             x1 = x1+gap;
@@ -137,7 +129,6 @@ public class Thruster
 
         }
         if((int)downy == ch || (int)downy == ch1)
-        //if(ch == 1)
         {
             //System.out.println("YAY");
             return 1;

@@ -29,18 +29,14 @@ public class Radar extends PApplet
         xr = x - radius - 30;
         yr = y - radius-540;
 
-    //System.out.println( "Xr" + xr);
-    //System.out.println( "Yr" + yr);
-
     }
     
     public void render()
     {
         ui.stroke(255);
         ui.fill(0);
-        ui.ellipse(pos.x, pos.y, diameter, diameter);//radius *2 for last two arg
+        ui.ellipse(pos.x, pos.y, diameter, diameter);
         ui.fill(255);
-        // Static field
         ui.translate(pos.x, pos.y);
         ui.rotate(rotation);
         ui.line(x, y,xr, yr);
@@ -55,7 +51,5 @@ public class Radar extends PApplet
         this.x=(int) Math.sin(rotation);
         this.y = (int) -(float) Math.cos(rotation);
         rotation += 0.0039f;
-
-       // System.out.println("pos x "+ pos.x+"pos y"+ pos.y);
     }
 }
