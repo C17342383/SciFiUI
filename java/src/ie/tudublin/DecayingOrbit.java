@@ -69,9 +69,12 @@ public class DecayingOrbit
 
     public int decay()
     {
+        float che = x - 115;
         decay = decay -1;
+        System.out.println("decay " + decay);
+        System.out.println("che " + che);
 
-        if(decay <= x - 110)
+        if(decay == 281)
         {
             return 1;
         }
