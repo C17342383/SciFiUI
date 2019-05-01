@@ -170,10 +170,11 @@ I think what i'm most proud of is the thruster connectivity. I felt a sense of a
 # YouTube Video Link
 This is the youtube video for my project:
 
-[![YouTube](https://img.youtube.com/MiFeavigzzA.jpg)](https://youtu.be/MiFeavigzzA)
+[![YouTube](Images/YouTubePic.png)](https://youtu.be/MiFeavigzzA)
+[![YouTube](https://youtu.be/MiFeavigzzA.png)](https://youtu.be/MiFeavigzzA)
 
 
 
-
+[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
 
 
